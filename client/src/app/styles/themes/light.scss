@@ -1,0 +1,39 @@
+.app.light {
+  /* Светлая тема */
+  --primary: #1890ff;
+  --primary-hover: #40a9ff;
+  --primary-active: #096dd9;
+
+  --secondary: #096dd9;
+  --secondary-hover: #1890ff;
+  --secondary-active: #0050b3;
+
+  --success: #52c41a;
+  --success-hover: #73d13d;
+  --success-active: #389e0d;
+
+  --warning: #faad14;
+  --warning-hover: #ffc53d;
+  --warning-active: #d48806;
+
+  --danger: #f5222d;
+  --danger-hover: #ff4d4f;
+  --danger-active: #cf1322;
+
+  --info: #1890ff;
+  --info-hover: #40a9ff;
+  --info-active: #096dd9;
+
+  --link: #096dd9;
+  --link-hover: #40a9ff;
+  --link-active: #0050b3;
+
+  --white: #ffffff;
+  --black: #000000;
+
+  --text: #000000;
+  --text-invert: #ffffff;
+
+  --bg: #ffffff;
+  --bg-dark: #bfbfbf;
+}

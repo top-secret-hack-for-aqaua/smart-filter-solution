@@ -1,0 +1,94 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "baseUrl": "./",
+    "types": [
+      "@svgx/vite-plugin-react",
+      "vite/client"
+    ],
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true,
+    "paths": {
+      "@/": [
+        "src/"
+      ],
+      "@/*": [
+        "src/*"
+      ],
+      "@styles/": [
+        "src/app/styles"
+      ],
+      "@styles/*": [
+        "src/app/styles/*"
+      ],
+      "@app": [
+        "src/app/"
+      ],
+      "@app/*": [
+        "src/app/*"
+      ],
+      "@pages": [
+        "src/pages/"
+      ],
+      "@pages/*": [
+        "src/pages/*"
+      ],
+      "@shared": [
+        "src/shared/"
+      ],
+      "@shared/*": [
+        "src/shared/*"
+      ],
+      "@assets": [
+        "src/shared/assets/"
+      ],
+      "@assets/*": [
+        "src/shared/assets/*"
+      ],
+      "@widgets": [
+        "src/widgets/"
+      ],
+      "@widgets/*": [
+        "src/widgets/*"
+      ],
+      "@features": [
+        "src/features/"
+      ],
+      "@features/*": [
+        "src/features/*"
+      ],
+      "@entities": [
+        "src/entities/"
+      ],
+      "@entities/*": [
+        "src/entities/*"
+      ]
+    }
+  },
+  "include": [
+    "src"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
+}

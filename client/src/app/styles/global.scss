@@ -1,0 +1,14 @@
+@import "reset/reset";
+@import "variables/variables";
+@import "fonts/fonts";
+
+@import "themes/dark";
+@import "themes/light";
+
+
+.app {
+  min-width: 100vw;
+  min-height: 100vh;
+  width: 100%;
+  height: 100%;
+}

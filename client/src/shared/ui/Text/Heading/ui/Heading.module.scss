@@ -1,0 +1,97 @@
+.heading {
+  &.primary {
+    color: var(--primary);
+  }
+
+  &.secondary {
+    color: var(--secondary);
+  }
+
+  &.success {
+    color: var(--success);
+  }
+
+  &.warning {
+    color: var(--warning);
+  }
+
+  &.danger {
+    color: var(--danger);
+  }
+
+  &.info {
+    color: var(--info);
+  }
+
+  &.link {
+    color: var(--link);
+  }
+
+  &.white {
+    color: var(--white);
+  }
+
+  &.black {
+    color: var(--black);
+  }
+
+  &.h1 {
+    font: var(--heading-1);
+  }
+
+  &.h2 {
+    font: var(--heading-2);
+  }
+
+  &.h3 {
+    font: var(--heading-3);
+  }
+
+  &.h4 {
+    font: var(--heading-4);
+  }
+
+  &.h5 {
+    font: var(--heading-5);
+  }
+
+  &.h6 {
+    font: var(--heading-6);
+  }
+
+  &.fontBlack {
+    font-weight: var(--fontBlack);
+  }
+
+  &.fontBold {
+    font-weight: var(--fontBold);
+  }
+
+  &.fontMedium {
+    font-weight: var(--fontMedium);
+  }
+
+  &.fontNormal {
+    font-weight: var(--fontNormal);
+  }
+
+  &.fontLight {
+    font-weight: var(--fontLight);
+  }
+
+  &.fontThin {
+    font-weight: var(--fontThin);
+  }
+
+  &.fontFirst {
+    font-family: var(--fontFamilyFirst);
+  }
+
+  &.fontSecond {
+    font-family: var(--fontFamilySecond);
+  }
+
+  &.fontThird {
+    font-family: var(--fontFamilyThird);
+  }
+}

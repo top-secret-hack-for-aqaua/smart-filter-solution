@@ -1,0 +1,155 @@
+.link {
+  transition: .3s all ease;
+
+  &.primary {
+    color: var(--primary);
+
+    &:hover {
+      color: var(--primary-hover);
+    }
+
+    &:active {
+      color: var(--primary-active);
+    }
+  }
+
+  &.secondary {
+    color: var(--secondary);
+
+    &:hover {
+      color: var(--secondary-hover);
+    }
+
+    &:active {
+      color: var(--secondary-active);
+    }
+  }
+
+  &.success {
+    color: var(--success);
+
+    &:hover {
+      color: var(--success-hover);
+    }
+
+    &:active {
+      color: var(--success-active);
+    }
+  }
+
+  &.warning {
+    color: var(--warning);
+
+    &:hover {
+      color: var(--warning-hover);
+    }
+
+    &:active {
+      color: var(--warning-active);
+    }
+  }
+
+  &.danger {
+    color: var(--danger);
+
+    &:hover {
+      color: var(--danger-hover);
+    }
+
+    &:active {
+      color: var(--danger-active);
+    }
+  }
+
+  &.info {
+    color: var(--info);
+
+    &:hover {
+      color: var(--info-hover);
+    }
+
+    &:active {
+      color: var(--info-active);
+    }
+  }
+
+  &.link {
+    color: var(--link);
+
+    &:hover {
+      color: var(--link-hover);
+    }
+
+    &:active {
+      color: var(--link-active);
+    }
+  }
+
+  &.white {
+    color: var(--white);
+  }
+
+  &.black {
+    color: var(--black);
+  }
+
+  &.h1 {
+    font: var(--paragraph-1);
+  }
+
+  &.h2 {
+    font: var(--paragraph-2);
+  }
+
+  &.h3 {
+    font: var(--paragraph-3);
+  }
+
+  &.h4 {
+    font: var(--paragraph-4);
+  }
+
+  &.h5 {
+    font: var(--paragraph-5);
+  }
+
+  &.h6 {
+    font: var(--paragraph-6);
+  }
+
+  &.fontBlack {
+    font-weight: var(--fontBlack);
+  }
+
+  &.fontBold {
+    font-weight: var(--fontBold);
+  }
+
+  &.fontMedium {
+    font-weight: var(--fontMedium);
+  }
+
+  &.fontNormal {
+    font-weight: var(--fontNormal);
+  }
+
+  &.fontLight {
+    font-weight: var(--fontLight);
+  }
+
+  &.fontThin {
+    font-weight: var(--fontThin);
+  }
+
+  &.fontFirst {
+    font-family: var(--fontFamilyFirst);
+  }
+
+  &.fontSecond {
+    font-family: var(--fontFamilySecond);
+  }
+
+  &.fontThird {
+    font-family: var(--fontFamilyThird);
+  }
+}

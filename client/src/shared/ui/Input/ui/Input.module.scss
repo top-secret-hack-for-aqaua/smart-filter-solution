@@ -1,0 +1,227 @@
+.wrapper {
+  position: relative;
+}
+
+.label {
+  position: absolute;
+  pointer-events: none;
+  transition: 0.3s all ease;
+}
+
+
+.input {
+  position: relative;
+  width: 100%;
+  background-color: inherit;
+
+  &:focus {
+    outline: none;
+  }
+
+  & + .label {
+    opacity: 0.5;
+  }
+
+
+  &.primary {
+    border: 1px solid var(--primary);
+
+    &:focus + .label,
+    &:not([value=""]) + .label {
+      color: var(--secondary);
+    }
+  }
+
+  &.secondary {
+    border: 1px solid var(--secondary);
+
+    &:focus + .label,
+    &:not([value=""]) + .label {
+      color: var(--secondary);
+    }
+  }
+
+  &.h1 {
+    padding: var(--padding-3) var(--padding-1);
+    font: var(--paragraph-1);
+
+    & + .label {
+      top: 1rem;
+      left: 2rem;
+    }
+
+    &:focus + .label,
+    &:not([value=""]) + .label {
+      background-color: var(--white);
+      transform: scale(75%);
+      padding: 0 10px;
+      top: -0.75rem;
+      left: 1rem;
+    }
+
+  }
+
+  &.h2 {
+    padding: var(--padding-4) var(--padding-1);
+    font: var(--paragraph-2);
+
+    & + .label {
+      top: 0.85rem;
+      left: 1.5rem;
+    }
+
+    &:focus + .label,
+    &:not([value=""]) + .label {
+      background-color: var(--white);
+      transform: scale(75%);
+      padding: 0 10px;
+      top: -0.75rem;
+      left: 1rem;
+    }
+
+  }
+
+  &.h3 {
+    padding: var(--padding-5) var(--padding-2);
+    font: var(--paragraph-3);
+
+    & + .label {
+      top: 0.5rem;
+      left: 1.5rem;
+    }
+
+    &:focus + .label,
+    &:not([value=""]) + .label {
+      background-color: var(--white);
+      transform: scale(75%);
+      padding: 0 10px;
+      top: -0.6rem;
+      left: 1rem;
+    }
+
+  }
+
+  &.h4 {
+    padding: var(--padding-5) var(--padding-2);
+    font: var(--paragraph-4);
+
+    & + .label {
+      top: 0.5rem;
+      left: 1.5rem;
+    }
+
+    &:focus + .label,
+    &:not([value=""]) + .label {
+      background-color: var(--white);
+      transform: scale(75%);
+      padding: 0 10px;
+      top: -0.5rem;
+      left: 1rem;
+    }
+
+  }
+
+  &.h5 {
+    padding: var(--padding-6) var(--padding-3);
+    font: var(--paragraph-5);
+
+    & + .label {
+      top: 0.25rem;
+      left: 1rem;
+    }
+
+    &:focus + .label,
+    &:not([value=""]) + .label {
+      background-color: var(--white);
+      transform: scale(75%);
+      padding: 0 10px;
+      top: -0.4rem;
+      left: 1rem;
+    }
+
+  }
+
+  &.h6 {
+    padding: var(--padding-6) var(--padding-3);
+    font: var(--paragraph-6);
+
+    & + .label {
+      top: 0.25rem;
+      left: 1rem;
+    }
+
+    &:focus + .label,
+    &:not([value=""]) + .label {
+      background-color: var(--white);
+      transform: scale(75%);
+      padding: 0 10px;
+      top: -0.3rem;
+      left: 1rem;
+    }
+
+  }
+
+  &.white {
+    color: var(--white);
+  }
+
+  &.black {
+    color: var(--black);
+  }
+
+  &.whiteBg {
+    background-color: var(--white);
+
+    & + .label {
+      color: var(--black);
+    }
+
+    &:focus + .label,
+    &:not([value=""]) + .label {
+      opacity: 1;
+      background-color: var(--white);
+    }
+
+  }
+
+  &.blackBg {
+    background-color: var(--black);
+
+    & + .label {
+      color: var(--white);
+    }
+
+    &:focus + .label,
+    &:not([value=""]) + .label {
+      opacity: 1;
+      background-color: var(--black);
+    }
+
+  }
+
+  &.borderH1 {
+    border-radius: var(--border-radius-1);
+  }
+
+  &.borderH2 {
+    border-radius: var(--border-radius-2);
+  }
+
+  &.borderH3 {
+    border-radius: var(--border-radius-3);
+  }
+
+  &.borderH4 {
+    border-radius: var(--border-radius-4);
+  }
+
+  &.borderH5 {
+    border-radius: var(--border-radius-5);
+  }
+
+  &.borderH6 {
+    border-radius: var(--border-radius-6);
+  }
+
+
+}

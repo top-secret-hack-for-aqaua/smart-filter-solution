@@ -1,0 +1,225 @@
+.tag {
+  transition: .3s all ease;
+  display: inline-block;
+
+  &.primaryBg {
+    background-color: var(--primary);
+    border: 1px solid var(--primary);
+
+    &.filled {
+      background-color: var(--primary);
+
+    }
+
+    &:hover {
+      background-color: var(--primary-hover);
+    }
+
+    &:active {
+      background-color: var(--primary-active);
+    }
+  }
+
+
+  &.secondaryBg {
+    background-color: var(--secondary);
+    border: 1px solid var(--secondary);
+
+    &.filled {
+      background-color: var(--secondary);
+
+    }
+
+    &:hover {
+      background-color: var(--secondary-hover);
+    }
+
+    &:active {
+      background-color: var(--secondary-active);
+    }
+  }
+
+
+  &.successBg {
+    background-color: var(--success);
+    border: 1px solid var(--success);
+
+    &.filled {
+      background-color: var(--success);
+
+    }
+
+    &:hover {
+      background-color: var(--success-hover);
+    }
+
+    &:active {
+      background-color: var(--success-active);
+    }
+  }
+
+
+  &.warningBg {
+    background-color: var(--warning);
+    border: 1px solid var(--warning);
+
+    &.filled {
+      background-color: var(--warning);
+
+    }
+
+    &:hover {
+      background-color: var(--warning-hover);
+    }
+
+    &:active {
+      background-color: var(--warning-active);
+    }
+  }
+
+
+  &.dangerBg {
+    background-color: var(--danger);
+    border: 1px solid var(--danger);
+
+    &.filled {
+      background-color: var(--danger);
+
+    }
+
+    &:hover {
+      background-color: var(--danger-hover);
+    }
+
+    &:active {
+      background-color: var(--danger-active);
+    }
+  }
+
+
+  &.infoBg {
+    background-color: var(--info);
+    border: 1px solid var(--info);
+
+    &.filled {
+      background-color: var(--info);
+
+    }
+
+    &:hover {
+      background-color: var(--info-hover);
+    }
+
+    &:active {
+      background-color: var(--info-active);
+    }
+  }
+
+
+  &.linkBg {
+    background-color: var(--link);
+    border: 1px solid var(--link);
+
+    &.filled {
+      background-color: var(--link);
+    }
+
+    &:hover {
+      background-color: var(--link-hover);
+    }
+
+    &:active {
+      background-color: var(--link-active);
+    }
+
+  }
+
+  &.whiteBg {
+    background-color: var(--white);
+    border: 1px solid var(--white);
+  }
+
+
+  &.blackBg {
+    background-color: var(--black);
+    border: 1px solid var(--black);
+  }
+
+
+  &.h1 {
+    padding: var(--padding-3) var(--padding-1);
+  }
+
+  &.h2 {
+    padding: var(--padding-4) var(--padding-1);
+  }
+
+  &.h3 {
+    padding: var(--padding-5) var(--padding-2);
+  }
+
+  &.h4 {
+    padding: var(--padding-5) var(--padding-2);
+  }
+
+  &.h5 {
+    padding: var(--padding-6) var(--padding-3);
+  }
+
+  &.h6 {
+    padding: var(--padding-6) var(--padding-3);
+  }
+
+
+  &.borderH1 {
+    border-radius: var(--border-radius-1);
+  }
+
+  &.borderH2 {
+    border-radius: var(--border-radius-2);
+  }
+
+  &.borderH3 {
+    border-radius: var(--border-radius-3);
+  }
+
+  &.borderH4 {
+    border-radius: var(--border-radius-4);
+  }
+
+  &.borderH5 {
+    border-radius: var(--border-radius-5);
+  }
+
+  &.borderH6 {
+    border-radius: var(--border-radius-6);
+  }
+
+
+  &.dashed {
+    border-style: dashed;
+    background-color: inherit;
+
+    &:hover {
+      background-color: inherit;
+    }
+
+    &:active {
+      background-color: inherit;
+    }
+  }
+
+  &.default {
+    border-style: solid;
+    background-color: inherit;
+
+    &:hover {
+      background-color: inherit;
+    }
+
+    &:active {
+      background-color: inherit;
+
+    }
+  }
+}

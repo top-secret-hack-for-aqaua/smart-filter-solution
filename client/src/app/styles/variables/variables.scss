@@ -1,0 +1,93 @@
+:root {
+  /* Font Family */
+  --fontFamilyFirst: Montserrat, sans-serif;
+  --fontFamilySecond: Montserrat, sans-serif;
+  --fontFamilyThird: Montserrat, sans-serif;
+
+  /* Font Weight */
+  --fontBlack: 900;
+  --fontBold: 700;
+  --fontMedium: 500;
+  --fontRegular: 400;
+  --fontLight: 300;
+  --fontThin: 100;
+
+  /* Heading Sizes */
+  --heading-size-1: 3rem; /* 48px */
+  --heading-size-2: 2.5rem; /* 40px */
+  --heading-size-3: 2.25rem; /* 36px */
+  --heading-size-4: 2rem; /* 32px */
+  --heading-size-5: 1.75rem; /* 28px */
+  --heading-size-6: 1.5rem; /* 24px */
+
+  /* Heading Lines */
+  --heading-line-1: 1.2;
+  --heading-line-2: 1.2;
+  --heading-line-3: 1.2;
+  --heading-line-4: 1.2;
+  --heading-line-5: 1.2;
+  --heading-line-6: 1.2;
+
+  /* Paragraph Sizes */
+  --paragraph-size-1: 1.25rem; /* 20px */
+  --paragraph-size-2: 1.125rem; /* 18px */
+  --paragraph-size-3: 1rem; /* 16px */
+  --paragraph-size-4: 0.875rem; /* 14px */
+  --paragraph-size-5: 0.75rem; /* 12px */
+  --paragraph-size-6: 0.625rem; /* 10px */
+
+  /* Paragraph Lines */
+  --paragraph-line-1: 1.5;
+  --paragraph-line-2: 1.5;
+  --paragraph-line-3: 1.5;
+  --paragraph-line-4: 1.5;
+  --paragraph-line-5: 1.5;
+  --paragraph-line-6: 1.5;
+
+  /* Padding Sizes */
+  --padding-1: 1.5rem; /* 24px */
+  --padding-2: 1.25rem; /* 20px */
+  --padding-3: 1rem; /* 16px */
+  --padding-4: 0.75rem; /* 12px */
+  --padding-5: 0.5rem; /* 8px */
+  --padding-6: 0.25rem; /* 4px */
+
+  /* Border Radius */
+  --border-radius-1: 2rem;
+  --border-radius-2: 1.75rem;
+  --border-radius-3: 1.5rem;
+  --border-radius-4: 1.25rem;
+  --border-radius-5: 1rem;
+  --border-radius-6: 0.75rem;
+  /* Navbar Height */
+  --navbar-height: 70px;
+
+  /* Media Query Breakpoints */
+  --mobile-width: 320px;
+  --tablet-width: 768px;
+  --desktop-width: 1024px;
+  --large-desktop-width: 1600px;
+
+  --size-1: 100px;
+  --size-2: 80px;
+  --size-3: 60px;
+  --size-4: 40px;
+  --size-5: 20px;
+  --size-6: 10px;
+
+  /* Heading Font Styles */
+  --heading-1: var(--heading-size-1) / var(--heading-line-1) var(--fontFamilyFirst);
+  --heading-2: var(--heading-size-2) / var(--heading-line-2) var(--fontFamilyFirst);
+  --heading-3: var(--heading-size-3) / var(--heading-line-3) var(--fontFamilyFirst);
+  --heading-4: var(--heading-size-4) / var(--heading-line-4) var(--fontFamilyFirst);
+  --heading-5: var(--heading-size-5) / var(--heading-line-5) var(--fontFamilyFirst);
+  --heading-6: var(--heading-size-6) / var(--heading-line-6) var(--fontFamilyFirst);
+
+  /* Paragraph Font Styles */
+  --paragraph-1: var(--paragraph-size-1) / var(--paragraph-line-1) var(--fontFamilyFirst);
+  --paragraph-2: var(--paragraph-size-2) / var(--paragraph-line-2) var(--fontFamilyFirst);
+  --paragraph-3: var(--paragraph-size-3) / var(--paragraph-line-3) var(--fontFamilyFirst);
+  --paragraph-4: var(--paragraph-size-4) / var(--paragraph-line-4) var(--fontFamilyFirst);
+  --paragraph-5: var(--paragraph-size-5) / var(--paragraph-line-5) var(--fontFamilyFirst);
+  --paragraph-6: var(--paragraph-size-6) / var(--paragraph-line-6) var(--fontFamilyFirst);
+}
