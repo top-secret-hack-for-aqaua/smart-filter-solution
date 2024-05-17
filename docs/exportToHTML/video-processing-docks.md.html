@@ -1,0 +1,134 @@
+<html>
+<head>
+<title>video-processing-docks.md</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #c77dbb; font-style: italic;}
+.s4 { color: #6aab73;}
+.s5 { color: #d5b778;}
+.s6 { color: #bababa;}
+.s7 { color: #6aab73;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+video-processing-docks.md</font>
+</center></td></tr></table>
+<pre><span class="s0"># </span><span class="s2">Video Processing Docks</span>
+
+<span class="s0">## </span><span class="s2">Общие сведения и согласование интерфейсов</span>
+
+<span class="s0">### </span><span class="s2">Описание</span>
+
+<span class="s2">Для простоты реализации видеохостинг был реализован на базе Laravel с использованием Livewire.</span>
+
+<span class="s0">### </span><span class="s2">Стек технологий</span>
+
+<span class="s0">### </span><span class="s2">System design</span>
+
+<span class="s0">```</span><span class="s3">mermaid</span>
+<span class="s4">flowchart LR</span>
+    <span class="s4">A[Video Upload Service] --&gt;|Video upload| B[Video Processing Service]</span>
+    <span class="s4">B --&gt;|Frames| C[Image Analysis Service]</span>
+    <span class="s4">B --&gt;|Audio| D[Audio Analysis Service]</span>
+    <span class="s4">C &amp; D --&gt; E[Data Storage Service]</span>
+    <span class="s4">E --&gt; F[Notification Service]</span>
+    <span class="s4">G[API Gateway] --&gt; A &amp; B &amp; C &amp; D &amp; E &amp; F</span>
+    <span class="s4">H[Load Balancer] --&gt; G</span>
+<span class="s0">```</span>
+
+<span class="s0">```</span><span class="s3">mermaid</span>
+<span class="s4">flowchart LR</span>
+    <span class="s4">Front[Frontend] --&gt;|Загрузка видео| AGW[API Gateway]</span>
+    <span class="s4">AGW --&gt;|Потоковое сохранение файла с видео| VS[Video Storage]</span>
+    <span class="s4">AGW --&gt;|Регистрация видео в системе| AGW</span>
+    <span class="s4">VS --&gt;|Выделение аудио из видео| AS[Audio Descriptor]</span>
+    <span class="s4">VS --&gt;|Выделение значимых кадров| DFS[Delta Frame Descriptor]</span>
+    <span class="s4">AGW --&gt;|Администрирование Stop Words| SWS[Stop Words Service]</span>
+
+    <span class="s4">subgraph Video Processed Analysis</span>
+        <span class="s4">AS --&gt;|Поиск заблокированных слов| SI[Stop Words Identification]</span>
+        <span class="s4">AS --&gt;|Поиск потенциально опасных контекстов| RV[RASA validator]</span>
+        <span class="s4">DFS --&gt;|Поиск запрещенных предметов| OD[Object Detector]</span>
+        <span class="s4">DFS --&gt;|Поиск текста на изображении| OCR[OCR Processor]</span>
+        <span class="s4">OCR --&gt;|Поиск заблокированных слов| SI</span>
+        <span class="s4">OCR --&gt;|Поиск потенциально опасных контекстов| RV</span>
+    <span class="s4">end</span>
+
+    <span class="s4">style Video Processed Analysis fill:#f9f,stroke:#333,stroke-width:2px</span>
+<span class="s0">```</span>
+
+<span class="s0">### </span><span class="s2">Жизненный цикл обработки видео</span>
+
+<span class="s0">```</span><span class="s3">mermaid</span>
+<span class="s4">sequenceDiagram</span>
+<span class="s4">Front-&gt;&gt;AGW: Загрузка видео</span>
+<span class="s4">AGW-&gt;&gt;Video Storage: Потоковое сохрание файла с видео</span>
+<span class="s4">AGW-&gt;&gt;Video Service: Регистрация видео в системе</span>
+
+<span class="s4">loop Video Processing</span>
+    <span class="s4">Video Storage-&gt;&gt;Audio Descriptor: Выделение аудио из видео</span>
+    <span class="s4">Video Storage-&gt;&gt;Delta Frame Descriptor: Выделение значимых кадров</span>
+<span class="s4">end</span>
+
+<span class="s4">AGW-&gt;&gt;Stop Words Service: Администрирование Stop Words</span>
+
+<span class="s4">loop Video Processed Analise</span>
+    <span class="s4">Audio Descriptor-&gt;&gt;Stop Words Identification: Поиск заброкированных слов администратором</span>
+    <span class="s4">Audio Descriptor-&gt;&gt;RASA validator: Поиск потанциально опасных контекстов</span>
+    <span class="s4">Delta Frame Descriptor-&gt;&gt;Object Detector: Поиск на изображении запрещенных предметов</span>
+    <span class="s4">Delta Frame Descriptor-&gt;&gt;OCR Processor: Поиск текста на изображении</span>
+    <span class="s4">OCR Processor-&gt;&gt;Stop Words Identification: Поиск заброкированных слов администратором</span>
+    <span class="s4">OCR Processor-&gt;&gt;RASA validator: Поиск потанциально опасных контекстов</span>
+<span class="s4">end</span>
+<span class="s0">```</span>
+
+<span class="s0">## </span><span class="s2">Frontend</span>
+
+<span class="s5">&lt;procedure </span><span class="s6">title</span><span class="s7">=&quot;Как запустить Frontend?&quot; </span><span class="s6">id</span><span class="s7">=&quot;instanse-front&quot;</span><span class="s5">&gt;</span>
+    <span class="s5">&lt;step&gt;</span>
+        <span class="s5">&lt;p&gt;</span><span class="s2">Start typing </span><span class="s5">&lt;code&gt;</span><span class="s2">procedure</span><span class="s5">&lt;/code&gt; </span><span class="s2">and select a procedure type from the completion suggestions:</span><span class="s5">&lt;/p&gt;</span>
+        <span class="s5">&lt;img </span><span class="s6">src</span><span class="s7">=&quot;completion_procedure.png&quot; </span><span class="s6">alt</span><span class="s7">=&quot;completion suggestions for procedure&quot; </span><span class="s6">border-effect</span><span class="s7">=&quot;line&quot;</span><span class="s5">/&gt;</span>
+    <span class="s5">&lt;/step&gt;</span>
+    <span class="s5">&lt;step&gt;</span>
+        <span class="s5">&lt;p&gt;</span><span class="s2">Press </span><span class="s5">&lt;shortcut&gt;</span><span class="s2">Tab</span><span class="s5">&lt;/shortcut&gt; </span><span class="s2">or </span><span class="s5">&lt;shortcut&gt;</span><span class="s2">Enter</span><span class="s5">&lt;/shortcut&gt; </span><span class="s2">to insert the markup.</span><span class="s5">&lt;/p&gt;</span>
+    <span class="s5">&lt;/step&gt;</span>
+<span class="s5">&lt;/procedure&gt;</span>
+
+<span class="s0">## </span><span class="s2">Backend</span>
+
+<span class="s5">&lt;procedure </span><span class="s6">title</span><span class="s7">=&quot;Как запустить Backend?&quot; </span><span class="s6">id</span><span class="s7">=&quot;instanse-back&quot;</span><span class="s5">&gt;</span>
+    <span class="s5">&lt;step&gt;</span>
+        <span class="s5">&lt;p&gt;</span><span class="s2">Start typing </span><span class="s5">&lt;code&gt;</span><span class="s2">procedure</span><span class="s5">&lt;/code&gt; </span><span class="s2">and select a procedure type from the completion suggestions:</span><span class="s5">&lt;/p&gt;</span>
+        <span class="s5">&lt;img </span><span class="s6">src</span><span class="s7">=&quot;completion_procedure.png&quot; </span><span class="s6">alt</span><span class="s7">=&quot;completion suggestions for procedure&quot; </span><span class="s6">border-effect</span><span class="s7">=&quot;line&quot;</span><span class="s5">/&gt;</span>
+    <span class="s5">&lt;/step&gt;</span>
+    <span class="s5">&lt;step&gt;</span>
+        <span class="s5">&lt;p&gt;</span><span class="s2">Press </span><span class="s5">&lt;shortcut&gt;</span><span class="s2">Tab</span><span class="s5">&lt;/shortcut&gt; </span><span class="s2">or </span><span class="s5">&lt;shortcut&gt;</span><span class="s2">Enter</span><span class="s5">&lt;/shortcut&gt; </span><span class="s2">to insert the markup.</span><span class="s5">&lt;/p&gt;</span>
+    <span class="s5">&lt;/step&gt;</span>
+<span class="s5">&lt;/procedure&gt;</span>
+
+<span class="s0">### </span><span class="s2">API</span>
+
+<span class="s0">## </span><span class="s2">ML</span>
+
+<span class="s0">### </span><span class="s2">Video</span>
+
+<span class="s0">#### </span><span class="s2">Предложения</span><span class="s1">:</span>
+
+<span class="s0">- </span><span class="s2">Clips Image </span><span class="s1">(</span><span class="s2">Image2Text</span><span class="s1">)</span>
+<span class="s0">- </span><span class="s2">LLaVA </span><span class="s1">(</span><span class="s2">Image2Text</span><span class="s1">)</span>
+
+<span class="s2">Поиск объектов</span><span class="s1">:</span>
+
+<span class="s0">- </span><span class="s2">Yolo</span>
+
+<span class="s0">### </span><span class="s2">Audio</span>
+
+</pre>
+</body>
+</html>
