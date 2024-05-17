@@ -1,0 +1,50 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"aggression\"}}]": "utter_aggression",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"aggression\"}}, {\"prev_action\": {\"action_name\": \"utter_aggression\"}, \"user\": {\"intent\": \"aggression\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"drugs\"}}]": "utter_drugs",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"drugs\"}}, {\"prev_action\": {\"action_name\": \"utter_drugs\"}, \"user\": {\"intent\": \"drugs\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"lgbt\"}}]": "utter_lgbt",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"lgbt\"}}, {\"prev_action\": {\"action_name\": \"utter_lgbt\"}, \"user\": {\"intent\": \"lgbt\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"adds\"}}]": "utter_adds",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"adds\"}}, {\"prev_action\": {\"action_name\": \"utter_adds\"}, \"user\": {\"intent\": \"adds\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"normal\"}}]": "utter_normal",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"normal\"}}, {\"prev_action\": {\"action_name\": \"utter_normal\"}, \"user\": {\"intent\": \"normal\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"danger\"}}]": "utter_danger",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"danger\"}}, {\"prev_action\": {\"action_name\": \"utter_danger\"}, \"user\": {\"intent\": \"danger\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"sect\"}}]": "utter_sect",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"sect\"}}, {\"prev_action\": {\"action_name\": \"utter_sect\"}, \"user\": {\"intent\": \"sect\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"porno\"}}]": "utter_porno",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"porno\"}}, {\"prev_action\": {\"action_name\": \"utter_porno\"}, \"user\": {\"intent\": \"porno\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bad_words\"}}]": "utter_bad_words",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bad_words\"}}, {\"prev_action\": {\"action_name\": \"utter_bad_words\"}, \"user\": {\"intent\": \"bad_words\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {},
+    "rules_not_in_stories": [
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"porno\"}}, {\"prev_action\": {\"action_name\": \"utter_porno\"}, \"user\": {\"intent\": \"porno\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"danger\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"lgbt\"}}, {\"prev_action\": {\"action_name\": \"utter_lgbt\"}, \"user\": {\"intent\": \"lgbt\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"adds\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bad_words\"}}]",
+      "predicting default action with intent restart",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"sect\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"sect\"}}, {\"prev_action\": {\"action_name\": \"utter_sect\"}, \"user\": {\"intent\": \"sect\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"bad_words\"}}, {\"prev_action\": {\"action_name\": \"utter_bad_words\"}, \"user\": {\"intent\": \"bad_words\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"aggression\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"aggression\"}}, {\"prev_action\": {\"action_name\": \"utter_aggression\"}, \"user\": {\"intent\": \"aggression\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"normal\"}}, {\"prev_action\": {\"action_name\": \"utter_normal\"}, \"user\": {\"intent\": \"normal\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"drugs\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"adds\"}}, {\"prev_action\": {\"action_name\": \"utter_adds\"}, \"user\": {\"intent\": \"adds\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"porno\"}}]",
+      "predicting default action with intent back",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"lgbt\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"drugs\"}}, {\"prev_action\": {\"action_name\": \"utter_drugs\"}, \"user\": {\"intent\": \"drugs\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"danger\"}}, {\"prev_action\": {\"action_name\": \"utter_danger\"}, \"user\": {\"intent\": \"danger\"}}]",
+      "predicting default action with intent session_start",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"normal\"}}]"
+    ]
+  }
+}
