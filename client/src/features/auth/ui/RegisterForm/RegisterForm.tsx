@@ -63,7 +63,7 @@ export const RegisterForm = () => {
             <Text.Heading
                 className={cls.title}
                 size={SizeEnum.H2}
-                color={ColorEnum.BLACK}
+                color={ColorEnum.TEXT}
                 weight={WeightEnum.MEDIUM}
             >
                 Регистрация
@@ -83,7 +83,9 @@ export const RegisterForm = () => {
                             onChange={field.onChange}
                             size={SizeEnum.H1}
                             border={BorderEnum.H6}
-                            color={ColorEnum.BLACK}
+                            color={ColorEnum.TEXT}
+                            bgColor={ColorEnum.BG}
+                            borderColor={ColorEnum.SECONDARY}
                             name="full_name"
                             register={fullName}
                         />
@@ -114,7 +116,9 @@ export const RegisterForm = () => {
                             onChange={field.onChange}
                             size={SizeEnum.H1}
                             border={BorderEnum.H6}
-                            color={ColorEnum.BLACK}
+                            color={ColorEnum.TEXT}
+                            bgColor={ColorEnum.BG}
+                            borderColor={ColorEnum.SECONDARY}
                             name="email"
                             register={email}
                         />
@@ -145,7 +149,9 @@ export const RegisterForm = () => {
                             onChange={field.onChange}
                             size={SizeEnum.H1}
                             border={BorderEnum.H6}
-                            color={ColorEnum.BLACK}
+                            color={ColorEnum.TEXT}
+                            bgColor={ColorEnum.BG}
+                            borderColor={ColorEnum.SECONDARY}
                             name="password"
                             register={password}
                         />
@@ -176,7 +182,9 @@ export const RegisterForm = () => {
                             onChange={field.onChange}
                             size={SizeEnum.H1}
                             border={BorderEnum.H6}
-                            color={ColorEnum.BLACK}
+                            color={ColorEnum.TEXT}
+                            bgColor={ColorEnum.BG}
+                            borderColor={ColorEnum.SECONDARY}
                             name="confirm_password"
                             register={confirmPassword}
                         />
@@ -204,6 +212,7 @@ export const RegisterForm = () => {
             </Button>
             <Text.Paragraph
                 size={SizeEnum.H1}
+                color={ColorEnum.TEXT}
             >
                 Есть аккаунт?&nbsp;
                 <Text.Link

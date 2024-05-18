@@ -167,6 +167,22 @@
     color: var(--white);
   }
 
+
+  &.text {
+    color: var(--text);
+
+    & + .label {
+      color: var(--text);
+    }
+
+    &:focus + .label,
+    &:not([value=""]) + .label {
+      opacity: 1;
+      background-color: var(--text);
+    }
+  }
+
+
   &.black {
     color: var(--black);
   }
@@ -207,7 +223,7 @@
     background-color: var(--bg);
 
     & + .label {
-      color: var(--white);
+      color: var(--text);
     }
 
     &:focus + .label,
@@ -223,7 +239,7 @@
     background-color: var(--bg-dark);
 
     & + .label {
-      color: var(--white);
+      color: var(--text);
     }
 
     &:focus + .label,

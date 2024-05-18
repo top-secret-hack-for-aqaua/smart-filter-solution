@@ -1,5 +1,7 @@
 import cls from './DonutChart.module.scss';
 import { Pie } from '@ant-design/plots';
+import { ColorEnum, SizeEnum } from '@shared/lib';
+import { Text } from '@shared/ui';
 
 export const DonutChart = () => {
     const config = {
@@ -11,14 +13,20 @@ export const DonutChart = () => {
             { type: '分类五', value: 10 },
             { type: '其他', value: 5 },
         ],
-        height: 150,
-        width: 150,
         angleField: 'value',
         colorField: 'type',
         legend: false,
     };
     return (
-        <Pie {...config} />
+        <div className={cls.wrapper}>
+            <Text.Heading
+                size={SizeEnum.H5}
+                color={ColorEnum.TEXT}
+            >
+                Категории видео
+            </Text.Heading>
+            <Pie {...config} />
+        </div>
     );
 };
 

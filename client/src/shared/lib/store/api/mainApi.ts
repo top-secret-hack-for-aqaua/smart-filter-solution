@@ -9,11 +9,11 @@ const baseQuery = fetchBaseQuery({
     credentials: 'same-origin',
     prepareHeaders: (headers, { getState }) => {
         // const accessToken = localStorage.getItem("accessToken");
-        const accessToken = localStorage.getItem("accessToken");
+        const accessToken = localStorage.getItem('accessToken');
         if (accessToken) {
             headers.set('Authorization', `Bearer ${accessToken}`);
         }
-        headers.set("Content-Type", "application/json");
+        headers.set('Content-Type', 'application/json');
         return headers;
     },
 
@@ -28,7 +28,7 @@ const baseQueryWithReauth: BaseQueryFn<string | FetchArgs, unknown, FetchBaseQue
         if (refreshResult?.data) {
             // eslint-disable-next-line @typescript-eslint/ban-ts-comment
             // @ts-expect-error
-            const token = refreshResult.data.accessToken;
+            const token = refreshResult.data.token;
             localStorage.setItem('accessToken', token);
             api.dispatch(setToken(token));
             result = await baseQuery(args, api, extraOptions);

@@ -4,7 +4,11 @@ import { RootState } from '@shared/lib';
 
 interface initialState {
     accessToken: string,
-    user: never | null
+    user: {
+        full_name: string
+        id: string
+        email: string
+    } | null
 }
 
 const intitialState: initialState = {
@@ -28,3 +32,4 @@ export const { setToken, logout, setUser } = authSlice.actions;
 export default authSlice.reducer;
 
 export const selectAccessToken = (state: RootState) => state.auth.accessToken;
+export const selectCurrentUser = (state: RootState) => state.auth.user;

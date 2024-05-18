@@ -1,29 +1,12 @@
 import cls from './CategoriesPage.module.scss';
 import { BorderEnum, ColorEnum, SizeEnum, useDebounce, WeightEnum } from '@shared/lib';
-import { Input, ISelectItem, Select, Text } from '@shared/ui';
+import { Input, Select, Text } from '@shared/ui';
 import { useEffect, useState } from 'react';
 import { Category, useGetAllCategories } from '@entities/category';
+import { useGetChilds } from '@entities/child';
 
 export const CategoriesPage = () => {
-    const list: ISelectItem[] = [
-        {
-            label: 'test 1',
-            value: 'test 1',
-        },
-        {
-            label: 'test 2',
-            value: 'test 2',
-        },
-        {
-            label: 'test 3',
-            value: 'test 3',
-        },
-        {
-            label: 'test 4',
-            value: 'test 4',
-        },
-    ];
-    const [activeTab, setActiveTab] = useState(list[0].value);
+    const { data: childs } = useGetChilds();
     const [search, setSearch] = useState('');
     const debouncedSearchTerm = useDebounce({ value: search, delay: 100 });
     const { trigger, data } = useGetAllCategories();
@@ -31,7 +14,7 @@ export const CategoriesPage = () => {
         trigger('');
     }, []);
     const handleTabClick = (value: string) => {
-        setActiveTab(value);
+        console.log();
     };
     useEffect(() => {
         trigger(debouncedSearchTerm);
@@ -55,7 +38,10 @@ export const CategoriesPage = () => {
                 >
                     Доступные устройства
                 </Text.Heading>
-                <Select items={list} onSelect={handleTabClick} />
+                {childs
+                    &&
+                    <Select items={childs} onSelect={handleTabClick} />
+                }
             </div>
             <Input
                 search={true}

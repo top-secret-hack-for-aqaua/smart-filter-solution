@@ -1,5 +1,5 @@
 import { mainApi } from '@shared/lib/store/api';
-import { ILoginRequest, IRegisterRequest } from '@features/auth';
+import { ILoginRequest, INewUserRequest, IRegisterRequest } from '@features/auth';
 
 export const authApi = mainApi.injectEndpoints({
     endpoints: (build) => ({
@@ -23,6 +23,19 @@ export const authApi = mainApi.injectEndpoints({
                 method: 'GET',
             }),
         }),
+        newUser: build.mutation<any, INewUserRequest>({
+            query: (data) => ({
+                url: `/auth/create_children`,
+                method: 'POST',
+                body: data,
+            }),
+        }),
     }),
 });
-export const { useLoginMutation, useRegisterMutation, useLazyLogoutQuery } = authApi;
+export const {
+    useLoginMutation,
+    useRegisterMutation,
+    useLazyLogoutQuery,
+    useNewUserMutation,
+    useLogoutQuery,
+} = authApi;

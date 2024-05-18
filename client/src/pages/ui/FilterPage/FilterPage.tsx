@@ -1,32 +1,16 @@
 import cls from './FilterPage.module.scss';
-import { ISelectItem, Select, Text } from '@shared/ui';
+import { Select, Text } from '@shared/ui';
 import { ColorEnum, SizeEnum, WeightEnum } from '@shared/lib';
 import ArrowRight from '@assets/icons/arrowRight.svg';
 import { useState } from 'react';
 import Category from '@assets/icons/category.svg';
 import Time from '@assets/icons/time.svg';
 import { Link } from 'react-router-dom';
+import { useGetChilds } from '@entities/child';
 
 export const FilterPage = () => {
-    const list: ISelectItem[] = [
-        {
-            label: 'test 1',
-            value: 'test 1',
-        },
-        {
-            label: 'test 2',
-            value: 'test 2',
-        },
-        {
-            label: 'test 3',
-            value: 'test 3',
-        },
-        {
-            label: 'test 4',
-            value: 'test 4',
-        },
-    ];
-    const [activeTab, setActiveTab] = useState(list[0].value);
+    const { data } = useGetChilds();
+    const [activeTab, setActiveTab] = useState<string>();
     const handleTabClick = (value: string) => {
         setActiveTab(value);
     };
@@ -51,7 +35,9 @@ export const FilterPage = () => {
             >
                 Доступные устройства
             </Text.Heading>
-            <Select items={list} onSelect={handleTabClick} />
+            {data &&
+                <Select items={data} onSelect={handleTabClick} />
+            }
             <Text.Heading
                 color={ColorEnum.SECONDARY}
                 size={SizeEnum.H5}

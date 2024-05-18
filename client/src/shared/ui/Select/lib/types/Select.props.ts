@@ -1,6 +1,6 @@
 export interface ISelectItem {
-    label: string;
-    value: string;
+    name: string;
+    id: string;
 
 }
 

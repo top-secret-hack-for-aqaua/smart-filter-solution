@@ -50,6 +50,7 @@ export const Input = ({
                     [cls.darkBg]: bgColor === ColorEnum.DARKBG,
                     [cls.primary]: borderColor === ColorEnum.PRIMARY,
                     [cls.secondary]: borderColor === ColorEnum.SECONDARY,
+                    [cls.text]: color === ColorEnum.TEXT,
                     [cls.white]: color === ColorEnum.WHITE,
                     [cls.black]: color === ColorEnum.BLACK,
                     // РАЗМЕР
@@ -77,9 +78,11 @@ export const Input = ({
             >
                 {label}
             </Paragraph>
-            <div className={cls.icon}>
-                <SearchIcon />
-            </div>
+            {search &&
+                <div className={cls.icon}>
+                    <SearchIcon />
+                </div>
+            }
         </div>
     );
 };
