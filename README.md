@@ -26,6 +26,7 @@ flowchart TD
             C1[Проверка текста на нецензурную лексику]
             C2[Проверка текста на негативный контекст]
             C3[Определение категории текста Rasa]
+            C4
         end
 
         subgraph ImageAnalysis[Анализ изображений]
@@ -33,6 +34,7 @@ flowchart TD
             D1[Выделение текста с изображений OCR]
             D2[Проверка текста на нецензурную лексику и негативный контекст]
             D3[Проверка изображений на плохие объекты Yolo v5]
+            D4
         end
 
         subgraph Ops[DevOps & MLOps]
@@ -61,20 +63,25 @@ flowchart TD
     A2 -->|Нет| A3
     A3 --> B1 & B2
     B1 --> B3
-    B2 --> D1
+    B2 --> D1 & D2 & D3
     B3 --> C1
-    C1 --> C2
-    C2 --> C3
-    D1 --> D2
-    D2 --> D3
-    C3 --> Acolision
-    D3 --> Acolision
+    B3 --> C2
+    B3 --> C3
+    C1 --> C4
+    C2 --> C4
+    D1 --> D4
+    D2 --> D4
+    C4 --> Acolision
+    D3 --> D4
+    D4 --> Acolision
     Acolision --> E1
     A4 --> E1
-    C3 --> P1
+    AGW --> P1
+    Kafka --> P1
     P1 --> G1
     MLF --> P1
-    C3 --> MLF
+    C3 --> C4
+    C4 --> MLF
     Kafka --> OT
     E1 -->|HTTP| Frontend
 
