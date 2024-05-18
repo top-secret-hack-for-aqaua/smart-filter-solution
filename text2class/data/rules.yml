@@ -2,12 +2,47 @@ version: "3.1"
 
 rules:
 
-- rule: Say goodbye anytime the user says goodbye
+- rule: Сексуальное домогательство
   steps:
-  - intent: goodbye
-  - action: utter_goodbye
+  - intent: porno
+  - action: utter_porno
 
-- rule: Say 'I am a bot' anytime the user challenges
+- rule: Ненормативная лексика
   steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
+  - intent: bad_words
+  - action: utter_bad_words
+
+- rule: Опасные для здоровья действия
+  steps:
+  - intent: danger
+  - action: utter_danger
+
+- rule: Агрессия
+  steps:
+  - intent: aggression
+  - action: utter_aggression
+
+- rule: Рекламмные объявления
+  steps:
+  - intent: adds
+  - action: utter_adds
+
+- rule: Секты
+  steps:
+  - intent: sect
+  - action: utter_sect
+
+- rule: Пропаганда наркотиков
+  steps:
+  - intent: drugs
+  - action: utter_drugs
+
+- rule: Пропаганда ЛГБТ
+  steps:
+  - intent: lgbt
+  - action: utter_lgbt
+
+- rule: Номальный ответ
+  steps:
+  - intent: normal
+  - action: utter_normal
