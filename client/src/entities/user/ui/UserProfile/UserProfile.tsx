@@ -33,13 +33,16 @@ export const UserProfile = () => {
                     РЕДАКТИРОВАТЬ ПРОФИЛЬ
                 </Button>
                 <div className={cls.additional}>
-                    <Button
-                        color={ColorEnum.WHITE}
-                        bgColor={ColorEnum.PRIMARY}
-                        weight={WeightEnum.MEDIUM}
-                        size={SizeEnum.H1}>
-                        ДОБАВИТЬ УСТРОЙСТВО
-                    </Button>
+                    <Text.Link to={'/user/new'}>
+                        <Button
+                            color={ColorEnum.WHITE}
+                            bgColor={ColorEnum.PRIMARY}
+                            weight={WeightEnum.MEDIUM}
+                            size={SizeEnum.H1}>
+                            ДОБАВИТЬ УСТРОЙСТВО
+                        </Button>
+                    </Text.Link>
+
                     <Button
                         color={ColorEnum.WHITE}
                         bgColor={ColorEnum.PRIMARY}

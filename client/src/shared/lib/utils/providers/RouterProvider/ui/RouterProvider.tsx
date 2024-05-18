@@ -1,5 +1,5 @@
 import { createBrowserRouter, redirect } from 'react-router-dom';
-import { CategoriesPage, FilterPage, LoginPage, MainPage, RegisterPage, UserPage } from '@pages/ui';
+import { CategoriesPage, FilterPage, LoginPage, MainPage, NewUserPage, RegisterPage, UserPage } from '@pages/ui';
 import { BottomNavigation } from '@widgets/ui';
 
 export const router = createBrowserRouter([
@@ -13,7 +13,16 @@ export const router = createBrowserRouter([
             },
             {
                 path: 'user',
-                element: <UserPage />,
+                children: [
+                    {
+                        index: true,
+                        element: <UserPage />,
+                    },
+                    {
+                        path: 'new',
+                        element: <NewUserPage />,
+                    },
+                ],
             },
             {
                 path: 'filter',

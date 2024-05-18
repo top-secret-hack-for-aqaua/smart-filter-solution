@@ -1,7 +1,7 @@
 .wrapper {
   background-color: var(--bg-dark);
   border-radius: 20px;
-  padding: 10px;
+  padding: 15px 20px;
   display: flex;
 }
 
@@ -13,11 +13,12 @@
   &Item {
     padding: 10px;
     border-radius: 10px;
-    background-color: var(--bg);
+    background-color: var(--bg-dark);
+    border: 1px solid var(--bg);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
 
     & .info {
       display: flex;
@@ -25,8 +26,8 @@
       gap: 5px;
     }
     & svg {
-      width: 25px;
-      height: 25px;
+      width: 30px;
+      height: 30px;
     }
   }
 }

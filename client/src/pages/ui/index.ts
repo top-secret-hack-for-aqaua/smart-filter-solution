@@ -4,3 +4,4 @@ export * from './RegisterPage';
 export * from './UserPage';
 export * from './FilterPage';
 export * from './CategoriesPage';
+export * from './NewUserPage';
