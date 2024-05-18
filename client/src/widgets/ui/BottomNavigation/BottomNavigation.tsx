@@ -14,7 +14,7 @@ export const BottomNavigation = () => {
             icon: <Filter />,
         },
         {
-            link: '/home',
+            link: '/',
             icon: <Home />,
         },
         {
@@ -22,17 +22,20 @@ export const BottomNavigation = () => {
             icon: <Account />,
         },
     ];
-    const {pathname} = useLocation()
-    const str = pathname.replace("/", "")
+    const { pathname } = useLocation();
+
     return (
         <>
             <Outlet />
             <div className={cls.wrapper}>
                 <ul className={cls.list}>
                     {list.map((item) => (
-                        <li className={classNames(cls.listItem, {
-                            [cls.active]: item.link.includes(str)
-                         }, [])} color={cls.link} key={item.link}>
+                        <li
+                            className={classNames(cls.listItem, {
+                                [cls.active]: item.link === '/' ? pathname === item.link : pathname.startsWith(item.link),
+                            }, [])}
+                            key={item.link}
+                        >
                             <Text.Link to={item.link}>
                                 {item.icon}
                             </Text.Link>
@@ -43,4 +46,3 @@ export const BottomNavigation = () => {
         </>
     );
 };
-

@@ -1,7 +1,8 @@
 import cls from './CategoriesPage.module.scss';
-import { BorderEnum, ColorEnum, SizeEnum, WeightEnum } from '@shared/lib';
+import { BorderEnum, ColorEnum, SizeEnum, useDebounce, WeightEnum } from '@shared/lib';
 import { Input, ISelectItem, Select, Text } from '@shared/ui';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { Category, useGetAllCategories } from '@entities/category';
 
 export const CategoriesPage = () => {
     const list: ISelectItem[] = [
@@ -24,9 +25,17 @@ export const CategoriesPage = () => {
     ];
     const [activeTab, setActiveTab] = useState(list[0].value);
     const [search, setSearch] = useState('');
+    const debouncedSearchTerm = useDebounce({ value: search, delay: 100 });
+    const { trigger, data } = useGetAllCategories();
+    useEffect(() => {
+        trigger('');
+    }, []);
     const handleTabClick = (value: string) => {
         setActiveTab(value);
     };
+    useEffect(() => {
+        trigger(debouncedSearchTerm);
+    }, [debouncedSearchTerm]);
     return (
         <div className={cls.wrapper}>
             <Text.Heading
@@ -55,9 +64,11 @@ export const CategoriesPage = () => {
                 bgColor={ColorEnum.BG}
                 color={ColorEnum.WHITE}
                 border={BorderEnum.H4}
-                label={'Категории'} value={search} onChange={(event) => {
-                setSearch(event.target.value);
-            }} />
+                label={'Категории'} value={search}
+                onChange={(event) => {
+                    setSearch(event.target.value);
+                }}
+            />
             <Text.Paragraph
                 color={ColorEnum.SECONDARY}
                 size={SizeEnum.H1}
@@ -67,6 +78,11 @@ export const CategoriesPage = () => {
 
                 Выберите категории видео, к которым будет запрещен доступ
             </Text.Paragraph>
+            <ul className={cls.list}>
+                {data && data.map((item) => (
+                    <Category name={item.name} isActive={false} />
+                ))}
+            </ul>
         </div>
     );
 };

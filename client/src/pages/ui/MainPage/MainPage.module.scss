@@ -1,0 +1,29 @@
+.wrapper {
+  min-height: 100vh;
+  overflow-y: scroll;
+  padding: 20px;
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  & .title {
+    text-align: center;
+  }
+}
+
+.charts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &Text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & .link {
+      color: var(--secondary) !important;
+    }
+  }
+}

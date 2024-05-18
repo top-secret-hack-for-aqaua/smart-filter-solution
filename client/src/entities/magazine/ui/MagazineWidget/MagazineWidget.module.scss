@@ -1,0 +1,32 @@
+.wrapper {
+  background-color: var(--bg-dark);
+  border-radius: 20px;
+  padding: 10px;
+  display: flex;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &Item {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+
+    & .info {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    & svg {
+      width: 25px;
+      height: 25px;
+    }
+  }
+}

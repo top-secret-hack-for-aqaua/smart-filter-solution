@@ -5,3 +5,6 @@ export * from './Input';
 export * from './Notifications';
 export * from './Select';
 export * from './ThemeSwitcher';
+export * from './LineChart';
+export * from './DonutChart';
+export * from './BarChart';

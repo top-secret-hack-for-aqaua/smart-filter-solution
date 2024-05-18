@@ -4,95 +4,53 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5d21655-83d2-41ca-a069-30d187084f0a" name="Changes" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/client/src/entities/category/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/entities/category/lib/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/entities/category/services/categoryApi.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/entities/category/services/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/entities/category/ui/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/entities/user/ui/UserProfile/UserProfile.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/entities/user/ui/UserProfile/UserProfile.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/entities/user/ui/UserProfile/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/pages/ui/CategoriesPage/CategoriesPage.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/pages/ui/CategoriesPage/CategoriesPage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/pages/ui/CategoriesPage/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/pages/ui/FilterPage/FilterPage.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/pages/ui/FilterPage/FilterPage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/pages/ui/FilterPage/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/pages/ui/UserPage/UserPage.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/pages/ui/UserPage/UserPage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/pages/ui/UserPage/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/shared/assets/icons/account.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/shared/assets/icons/arrowDown.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/shared/assets/icons/arrowRight.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/shared/assets/icons/category.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/shared/assets/icons/filter.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/shared/assets/icons/home.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/shared/assets/icons/moon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/shared/assets/icons/notifications_none.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/shared/assets/icons/rightArrow.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/shared/assets/icons/search.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/shared/assets/icons/sun.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/shared/assets/icons/time.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/shared/ui/Notifications/Notifications.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/shared/ui/Notifications/Notifications.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/shared/ui/Notifications/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/shared/ui/Select/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/shared/ui/Select/lib/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/shared/ui/Select/lib/types/Select.props.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/shared/ui/Select/lib/types/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/shared/ui/Select/ui/Select.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/shared/ui/Select/ui/Select.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/shared/ui/Select/ui/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/shared/ui/ThemeSwitcher/ThemeSwitcher.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/shared/ui/ThemeSwitcher/ThemeSwitcher.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/shared/ui/ThemeSwitcher/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/widgets/lib/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/widgets/lib/types/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/widgets/lib/types/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/widgets/ui/BottomNavigation/BottomNavigation.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/widgets/ui/BottomNavigation/BottomNavigation.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/widgets/ui/BottomNavigation/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/widgets/ui/Toolbar/Toolbar.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/widgets/ui/Toolbar/Toolbar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/widgets/ui/Toolbar/index.ts" afterDir="false" />
+    <list default="true" id="f5d21655-83d2-41ca-a069-30d187084f0a" name="Changes" comment="Сделал авторизацию, страницу пользователя, страницу с фильтрами, делаю категории">
+      <change afterPath="$PROJECT_DIR$/client/src/entities/category/lib/services/categoryApi.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/entities/category/lib/services/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/entities/category/lib/types/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/entities/category/ui/Category/Category.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/entities/category/ui/Category/Category.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/entities/category/ui/Category/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/entities/magazine/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/entities/magazine/ui/MagazineWidget/MagazineWidget.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/entities/magazine/ui/MagazineWidget/MagazineWidget.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/entities/magazine/ui/MagazineWidget/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/entities/magazine/ui/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/entities/statistics/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/entities/statistics/ui/StatisticsWidget/StatisticsWidget.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/entities/statistics/ui/StatisticsWidget/StatisticsWidget.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/entities/statistics/ui/StatisticsWidget/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/entities/statistics/ui/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/pages/ui/MainPage/MainPage.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/pages/ui/MainPage/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/shared/assets/icons/pc.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/shared/ui/BarChart/BarChart.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/shared/ui/BarChart/BarChart.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/shared/ui/BarChart/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/shared/ui/DonutChart/DonutChart.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/shared/ui/DonutChart/DonutChart.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/shared/ui/DonutChart/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/shared/ui/LineChart/LineChart.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/shared/ui/LineChart/LineChart.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/shared/ui/LineChart/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.env" beforeDir="false" afterPath="$PROJECT_DIR$/client/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.eslintrc.cjs" beforeDir="false" afterPath="$PROJECT_DIR$/client/.eslintrc.cjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/main.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/styles/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/styles/global.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/styles/reset/reset.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/styles/reset/reset.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/app/styles/themes/dark.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/styles/themes/dark.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/styles/themes/light.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/styles/themes/light.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/styles/variables/variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/styles/variables/variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/entities/user/lib/services/userApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/entities/user/lib/services/userApi.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/entities/user/ui/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/entities/user/ui/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/features/auth/lib/hooks/useLogin.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/features/auth/lib/hooks/useLogin.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/features/auth/lib/types/auth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/features/auth/lib/types/auth.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/features/auth/ui/LoginForm/LoginForm.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/features/auth/ui/LoginForm/LoginForm.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/features/auth/ui/LoginForm/LoginForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/features/auth/ui/LoginForm/LoginForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/features/auth/ui/RegisterForm/RegisterForm.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/features/auth/ui/RegisterForm/RegisterForm.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/features/auth/ui/RegisterForm/RegisterForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/features/auth/ui/RegisterForm/RegisterForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/entities/category/hooks/useGetCategories.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/entities/category/lib/hooks/useGetAllCategories.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/entities/category/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/entities/category/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/entities/category/lib/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/entities/category/lib/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/entities/category/services/categoryApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/entities/category/lib/types/category.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/entities/category/services/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/entities/category/lib/hooks/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/entities/category/ui/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/entities/category/ui/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/ui/CategoriesPage/CategoriesPage.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/ui/CategoriesPage/CategoriesPage.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/ui/CategoriesPage/CategoriesPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/ui/CategoriesPage/CategoriesPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/ui/FilterPage/FilterPage.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/ui/FilterPage/FilterPage.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/pages/ui/MainPage/MainPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/ui/MainPage/MainPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/pages/ui/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/ui/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/shared/lib/store/api/mainApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/shared/lib/store/api/mainApi.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/shared/lib/types/global.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/shared/lib/types/global.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/shared/lib/utils/providers/RouterProvider/ui/RouterProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/shared/lib/utils/providers/RouterProvider/ui/RouterProvider.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/shared/lib/utils/providers/ThemeProvider/lib/ThemeContent.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/shared/lib/utils/providers/ThemeProvider/lib/ThemeContent.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/shared/lib/utils/providers/ThemeProvider/lib/types/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/shared/lib/utils/providers/ThemeProvider/lib/types/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/shared/lib/utils/providers/ThemeProvider/lib/useTheme.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/shared/lib/utils/providers/ThemeProvider/lib/useTheme.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/shared/ui/Button/ui/Button.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/shared/ui/Button/ui/Button.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/shared/ui/Button/ui/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/shared/ui/Button/ui/Button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/shared/ui/Input/lib/types/Input.props.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/shared/ui/Input/lib/types/Input.props.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/shared/ui/Input/ui/Input.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/shared/ui/Input/ui/Input.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/shared/ui/Input/ui/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/shared/ui/Input/ui/Input.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/shared/ui/Text/Heading/ui/Heading.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/shared/ui/Text/Heading/ui/Heading.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/shared/ui/Text/Heading/ui/Heading.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/shared/ui/Text/Heading/ui/Heading.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/shared/ui/Text/Paragraph/ui/Paragraph.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/shared/ui/Text/Paragraph/ui/Paragraph.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/shared/ui/Text/Paragraph/ui/Paragraph.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/shared/ui/Text/Paragraph/ui/Paragraph.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/shared/lib/hooks/useDebounce.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/shared/lib/hooks/useDebounce.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/shared/ui/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/shared/ui/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/widgets/lib/lindex.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/entities/category/hooks/useGetCategories.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/widgets/ui/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/widgets/ui/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/widgets/ui/BottomNavigation/BottomNavigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/widgets/ui/BottomNavigation/BottomNavigation.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/client/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,6 +108,7 @@
       <recent name="$PROJECT_DIR$/client/src/shared/assets/icons" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/src/entities/category/lib" />
       <recent name="$PROJECT_DIR$/client/src/entities/category" />
       <recent name="$PROJECT_DIR$/client/src/shared/ui/Select/lib" />
       <recent name="$PROJECT_DIR$/client/src/shared/ui/Select/ui" />
@@ -172,7 +131,7 @@
       <option name="presentableId" value="Default" />
       <updated>1715938677064</updated>
       <workItem from="1715938678081" duration="2263000" />
-      <workItem from="1715943798496" duration="25701000" />
+      <workItem from="1715943798496" duration="34623000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -190,7 +149,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715951354311</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Сделал авторизацию, страницу пользователя, страницу с фильтрами, делаю категории">
+      <option name="closed" value="true" />
+      <created>1716016151690</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1716016151690</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,6 +168,7 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="Сделал авторизацию, страницу пользователя, страницу с фильтрами, делаю категории" />
+    <option name="LAST_COMMIT_MESSAGE" value="Сделал авторизацию, страницу пользователя, страницу с фильтрами, делаю категории" />
   </component>
 </project>

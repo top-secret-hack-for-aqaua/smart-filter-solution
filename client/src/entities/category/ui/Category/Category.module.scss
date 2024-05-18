@@ -1,0 +1,19 @@
+.wrapper {
+  padding: 10px 15px;
+  background-color: var(--primary);
+  border-radius: var(--border-radius-1);
+  transition: 0.3s all ease;
+  cursor: pointer;
+
+  &:hover {
+    filter: brightness(110%);
+  }
+
+  &:active {
+    filter: brightness(80%);
+  }
+}
+
+.active {
+  background-color: var(--primary-active);
+}

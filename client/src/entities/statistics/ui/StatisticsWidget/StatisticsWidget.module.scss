@@ -1,0 +1,17 @@
+.wrapper {
+  background-color: var(--bg-dark);
+  border-radius: 20px;
+  padding: 20px;
+}
+.title {
+  margin-bottom: 20px;
+}
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.list {
+  display: flex;
+  gap: 20px
+}
