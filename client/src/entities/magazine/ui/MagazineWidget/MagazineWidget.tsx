@@ -45,7 +45,7 @@ export const MagazineWidget = () => {
                         <div className={cls.info}>
                             <Text.Heading
                                 size={SizeEnum.H6}
-                                color={ColorEnum.PRIMARY}
+                                color={ColorEnum.SECONDARY}
                             >
                                 {item.title}
                             </Text.Heading>
