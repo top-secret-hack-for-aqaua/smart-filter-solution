@@ -6,14 +6,14 @@ import QRCode from 'react-qr-code';
 
 export const NewUserPage = () => {
     const [time, setTime] = useState(30);
+    const timer = setInterval(() => {
+        setTime(time - 1);
+    }, 1000);
     useEffect(() => {
-        const time = setInterval(() => {
-            setTime(time - 1);
-        });
         if (time < 1) {
-            clearInterval(time);
+            clearInterval(timer);
         }
-    }, []);
+    }, [time]);
     return (
         <div className={cls.wrapper}>
             <div className={cls.info}>
