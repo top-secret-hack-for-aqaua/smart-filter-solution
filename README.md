@@ -42,6 +42,7 @@ flowchart TD
             MLF[ML Flow]
             OT[Open Telemetry]
             Kafka
+            s3[Ceph S3 - on host]
         end
 
         Acolision[Обработка категорий]
