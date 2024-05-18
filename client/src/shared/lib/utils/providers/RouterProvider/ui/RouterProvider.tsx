@@ -1,31 +1,49 @@
 import { createBrowserRouter, redirect } from 'react-router-dom';
-import { LoginPage, MainPage, RegisterPage } from '@pages/ui';
+import { CategoriesPage, FilterPage, LoginPage, MainPage, RegisterPage, UserPage } from '@pages/ui';
+import { BottomNavigation } from '@widgets/ui';
 
 export const router = createBrowserRouter([
     {
         path: '/',
+        element: <BottomNavigation />,
         children: [
             {
                 index: true,
                 element: <MainPage />,
             },
-
             {
-                path: 'auth',
+                path: 'user',
+                element: <UserPage />,
+            },
+            {
+                path: 'filter',
                 children: [
                     {
                         index: true,
-                        loader: async () => redirect('/auth/login'),
+                        element: <FilterPage />,
                     },
                     {
-                        path: 'login',
-                        element: <LoginPage />,
-                    },
-                    {
-                        path: 'register',
-                        element: <RegisterPage />,
+                        path: 'categories',
+                        element: <CategoriesPage />,
                     },
                 ],
+            },
+        ],
+    },
+    {
+        path: '/auth',
+        children: [
+            {
+                index: true,
+                loader: async () => redirect('/auth/login'),
+            },
+            {
+                path: 'login',
+                element: <LoginPage />,
+            },
+            {
+                path: 'register',
+                element: <RegisterPage />,
             },
         ],
     },

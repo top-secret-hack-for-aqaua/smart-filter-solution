@@ -234,6 +234,32 @@
     border: 1px solid var(--black);
   }
 
+  &.bg {
+    background-color: var(--bg);
+    border: 1px solid var(--bg);
+
+    &:hover {
+      filter: brightness(110%);
+    }
+
+    &:active {
+      filter: brightness(80%);
+    }
+  }
+
+  &.bgDark {
+    background-color: var(--bg-dark);
+    border: 1px solid var(--bg-dark);
+
+    &:hover {
+      filter: brightness(110%);
+    }
+
+    &:active {
+      filter: brightness(80%);
+    }
+  }
+
 
   &.h1 {
     padding: var(--padding-3) var(--padding-1);

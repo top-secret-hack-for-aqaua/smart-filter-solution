@@ -6,6 +6,7 @@ export interface IInputProps extends Omit<
     DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>,
     'size' | 'onChange'
 > {
+    search?: boolean;
     label: string;
     size?: SizeEnum;
     borderColor?: ColorEnum;

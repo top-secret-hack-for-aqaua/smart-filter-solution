@@ -1,8 +1,10 @@
 .wrapper {
   position: relative;
+  z-index: 12;
 }
 
 .label {
+  z-index: 10;
   position: absolute;
   pointer-events: none;
   transition: 0.3s all ease;
@@ -184,6 +186,7 @@
 
   }
 
+
   &.blackBg {
     background-color: var(--black);
 
@@ -195,6 +198,38 @@
     &:not([value=""]) + .label {
       opacity: 1;
       background-color: var(--black);
+    }
+
+  }
+
+
+  &.bg {
+    background-color: var(--bg);
+
+    & + .label {
+      color: var(--white);
+    }
+
+    &:focus + .label,
+    &:not([value=""]) + .label {
+      opacity: 1;
+      background-color: var(--bg);
+    }
+
+  }
+
+
+  &.darkBg {
+    background-color: var(--bg-dark);
+
+    & + .label {
+      color: var(--white);
+    }
+
+    &:focus + .label,
+    &:not([value=""]) + .label {
+      opacity: 1;
+      background-color: var(--bg-dark);
     }
 
   }
@@ -223,5 +258,21 @@
     border-radius: var(--border-radius-6);
   }
 
+}
 
+.icon {
+  z-index: 10;
+  position: absolute;
+  right: 20px;
+  top: 12px;
+  max-width: 20px;
+  width: 100%;
+  height: 70%;
+
+  & svg {
+    & path {
+      opacity: 50%;
+      stroke: var(--text);
+    }
+  }
 }

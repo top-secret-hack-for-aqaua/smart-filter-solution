@@ -4,7 +4,7 @@ export const userApi = mainApi.injectEndpoints({
     endpoints: (build) => ({
         getMe: build.query({
             query: () => ({
-                url: `/user/me`,
+                url: `/auth/me`,
                 method: 'GET',
             }),
         }),

@@ -1,0 +1,19 @@
+.wrapper {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  & .title {
+    text-align: center;
+  }
+  & .select {
+    position: relative;
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+.inputSearch {
+
+}

@@ -1,0 +1,44 @@
+.wrapper {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: var(--primary);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: 10px 30px;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+
+  &Item {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: 0.3s all ease;
+    background-color: var(--primary);
+
+    &:hover {
+      filter: brightness(80%);
+    }
+
+    & a {
+      padding: 15px;
+    }
+    & svg {
+      padding: 0;
+      margin: 0;
+      display: block;
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
+.active {
+  filter: brightness(75%);
+}

@@ -26,7 +26,7 @@ export const Paragraph = (
                 [cls.link]: color === ColorEnum.LINK,
                 [cls.white]: color === ColorEnum.WHITE,
                 [cls.black]: color === ColorEnum.BLACK,
-
+                [cls.text]: color === ColorEnum.TEXT,
                 // РАЗМЕРЫ
                 [cls.h1]: size === SizeEnum.H1,
                 [cls.h2]: size === SizeEnum.H2,

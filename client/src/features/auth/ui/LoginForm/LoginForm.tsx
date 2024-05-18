@@ -70,8 +70,8 @@ export const LoginForm = () => {
                             label="Почта"
                             value={field.value}
                             onChange={field.onChange}
-                            size={SizeEnum.H2}
-                            border={BorderEnum.H6}
+                            size={SizeEnum.H1}
+                            border={BorderEnum.H5}
                             color={ColorEnum.BLACK}
                             name="email"
                             register={email}
@@ -80,7 +80,7 @@ export const LoginForm = () => {
                             <Text.Paragraph
                                 className={cls.error}
                                 color={ColorEnum.DANGER}
-                                size={SizeEnum.H4}
+                                size={SizeEnum.H2}
                             >
                                 {errors.email.message}
                             </Text.Paragraph>
@@ -101,8 +101,8 @@ export const LoginForm = () => {
                             label="Пароль"
                             value={field.value}
                             onChange={field.onChange}
-                            size={SizeEnum.H2}
-                            border={BorderEnum.H6}
+                            size={SizeEnum.H1}
+                            border={BorderEnum.H5}
                             color={ColorEnum.BLACK}
                             name="password"
                             register={password}
@@ -111,7 +111,7 @@ export const LoginForm = () => {
                             <Text.Paragraph
                                 className={cls.error}
                                 color={ColorEnum.DANGER}
-                                size={SizeEnum.H4}
+                                size={SizeEnum.H2}
                             >
                                 {errors.password.message}
                             </Text.Paragraph>
@@ -123,18 +123,18 @@ export const LoginForm = () => {
                 isLoading={isLoading}
                 type="submit"
                 color={ColorEnum.WHITE}
-                size={SizeEnum.H2}
+                size={SizeEnum.H1}
                 bgColor={ColorEnum.PRIMARY}
                 border={BorderEnum.H5}
             >
                 Отправить
             </Button>
             <Text.Paragraph
-                size={SizeEnum.H3}
+                size={SizeEnum.H1}
             >
                 Нет аккаунта?&nbsp;
                 <Text.Link
-                    size={SizeEnum.H3}
+                    size={SizeEnum.H1}
                     to="/auth/register">Создать</Text.Link>
             </Text.Paragraph>
         </form>

@@ -8,5 +8,11 @@ export interface IAuthRequest {
     email: string,
     password: string
 }
-export interface ILoginRequest extends IAuthRequest{}
-export interface IRegisterRequest extends IAuthRequest{}
+
+export interface ILoginRequest extends IAuthRequest {
+}
+
+export interface IRegisterRequest extends IAuthRequest {
+    full_name: string;
+    confirm_password: string;
+}

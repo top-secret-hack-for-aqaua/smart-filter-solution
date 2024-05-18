@@ -3,6 +3,7 @@ import { IInputProps } from '@shared/ui/Input';
 import { ChangeEvent, useEffect, useState } from 'react';
 import { BorderEnum, classNames, ColorEnum, SizeEnum, useDebounce } from '@shared/lib';
 import { Paragraph } from '@shared/ui';
+import SearchIcon from '@assets/icons/search.svg';
 
 export const Input = ({
                           color = ColorEnum.BLACK,
@@ -11,6 +12,7 @@ export const Input = ({
                           value,
                           size = SizeEnum.H1,
                           label,
+                          search = false,
                           borderColor = ColorEnum.PRIMARY,
                           type,
                           className,
@@ -44,6 +46,8 @@ export const Input = ({
                     // ЦВЕТА
                     [cls.whiteBg]: bgColor === ColorEnum.WHITE,
                     [cls.blackBg]: bgColor === ColorEnum.BLACK,
+                    [cls.bg]: bgColor === ColorEnum.BG,
+                    [cls.darkBg]: bgColor === ColorEnum.DARKBG,
                     [cls.primary]: borderColor === ColorEnum.PRIMARY,
                     [cls.secondary]: borderColor === ColorEnum.SECONDARY,
                     [cls.white]: color === ColorEnum.WHITE,
@@ -73,6 +77,9 @@ export const Input = ({
             >
                 {label}
             </Paragraph>
+            <div className={cls.icon}>
+                <SearchIcon />
+            </div>
         </div>
     );
 };

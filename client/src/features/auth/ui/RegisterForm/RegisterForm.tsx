@@ -11,6 +11,7 @@ export const RegisterForm = () => {
         formState: {
             errors,
         },
+        watch,
         handleSubmit,
         control,
         register,
@@ -26,6 +27,17 @@ export const RegisterForm = () => {
         pattern: {
             value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
             message: 'Введите корректный адрес электронной почты',
+        },
+    });
+    const fullName = register('full_name', {
+        required: 'Имя обязательно',
+    });
+    const confirmPassword = register('confirm_password', {
+        required: 'Повторите пароль',
+        validate: (val: string) => {
+            if (watch('password') != val) {
+                return 'Пароли не совпадают';
+            }
         },
     });
     const password = register('password', {
@@ -57,6 +69,37 @@ export const RegisterForm = () => {
                 Регистрация
             </Text.Heading>
             <Controller
+                name="full_name"
+                control={control}
+                render={({ field }) => (
+                    <div className={cls.wrapper}>
+                        <Input
+                            className={classNames('', {
+                                [cls.errorInput]: errors.full_name !== undefined,
+                            }, [])}
+                            type="text"
+                            label="ФИО"
+                            value={field.value}
+                            onChange={field.onChange}
+                            size={SizeEnum.H1}
+                            border={BorderEnum.H6}
+                            color={ColorEnum.BLACK}
+                            name="full_name"
+                            register={fullName}
+                        />
+                        {errors.full_name &&
+                            <Text.Paragraph
+                                className={cls.error}
+                                color={ColorEnum.DANGER}
+                                size={SizeEnum.H2}
+                            >
+                                {errors.full_name.message}
+                            </Text.Paragraph>
+                        }
+                    </div>
+                )}
+            />
+            <Controller
                 name="email"
                 control={control}
                 render={({ field }) => (
@@ -69,7 +112,7 @@ export const RegisterForm = () => {
                             label="Почта"
                             value={field.value}
                             onChange={field.onChange}
-                            size={SizeEnum.H2}
+                            size={SizeEnum.H1}
                             border={BorderEnum.H6}
                             color={ColorEnum.BLACK}
                             name="email"
@@ -79,7 +122,7 @@ export const RegisterForm = () => {
                             <Text.Paragraph
                                 className={cls.error}
                                 color={ColorEnum.DANGER}
-                                size={SizeEnum.H4}
+                                size={SizeEnum.H2}
                             >
                                 {errors.email.message}
                             </Text.Paragraph>
@@ -100,7 +143,7 @@ export const RegisterForm = () => {
                             label="Пароль"
                             value={field.value}
                             onChange={field.onChange}
-                            size={SizeEnum.H2}
+                            size={SizeEnum.H1}
                             border={BorderEnum.H6}
                             color={ColorEnum.BLACK}
                             name="password"
@@ -110,9 +153,40 @@ export const RegisterForm = () => {
                             <Text.Paragraph
                                 className={cls.error}
                                 color={ColorEnum.DANGER}
-                                size={SizeEnum.H4}
+                                size={SizeEnum.H2}
                             >
                                 {errors.password.message}
+                            </Text.Paragraph>
+                        }
+                    </div>
+                )}
+            />
+            <Controller
+                name="confirm_password"
+                control={control}
+                render={({ field }) => (
+                    <div className={cls.wrapper}>
+                        <Input
+                            className={classNames('', {
+                                [cls.errorInput]: errors.confirm_password !== undefined,
+                            }, [])}
+                            type="password"
+                            label="Повторите пароль"
+                            value={field.value}
+                            onChange={field.onChange}
+                            size={SizeEnum.H1}
+                            border={BorderEnum.H6}
+                            color={ColorEnum.BLACK}
+                            name="confirm_password"
+                            register={confirmPassword}
+                        />
+                        {errors.confirm_password &&
+                            <Text.Paragraph
+                                className={cls.error}
+                                color={ColorEnum.DANGER}
+                                size={SizeEnum.H2}
+                            >
+                                {errors.confirm_password.message}
                             </Text.Paragraph>
                         }
                     </div>
@@ -122,18 +196,18 @@ export const RegisterForm = () => {
                 isLoading={isLoading}
                 type="submit"
                 color={ColorEnum.WHITE}
-                size={SizeEnum.H2}
+                size={SizeEnum.H1}
                 bgColor={ColorEnum.PRIMARY}
                 border={BorderEnum.H5}
             >
                 Отправить
             </Button>
             <Text.Paragraph
-                size={SizeEnum.H3}
+                size={SizeEnum.H1}
             >
                 Есть аккаунт?&nbsp;
                 <Text.Link
-                    size={SizeEnum.H3}
+                    size={SizeEnum.H1}
                     to="/auth/login">Войти</Text.Link>
             </Text.Paragraph>
         </form>

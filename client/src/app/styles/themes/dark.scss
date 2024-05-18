@@ -1,12 +1,13 @@
 .app.dark {
   /* Темная тема */
-  --primary: #1890ff;
-  --primary-hover: #40a9ff;
-  --primary-active: #096dd9;
+  --primary: #722ed1;
+  --primary-hover: #531dab;
+  --primary-active: #391085;
 
-  --secondary: #096dd9;
+
+  --secondary: #69b1ff;
   --secondary-hover: #1890ff;
-  --secondary-active: #0050b3;
+  --secondary-active: #030852;
 
   --success: #52c41a;
   --success-hover: #73d13d;
@@ -34,6 +35,6 @@
   --text: #ffffff;
   --text-invert: #000000;
 
-  --bg: #262626;
-  --bg-dark: #1f1f1f;
+  --bg: #434343;
+  --bg-dark: #262626;
 }

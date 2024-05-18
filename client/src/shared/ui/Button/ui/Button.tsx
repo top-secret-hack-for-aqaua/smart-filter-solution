@@ -33,7 +33,7 @@ export const Button = (
                 [cls.link]: color === ColorEnum.LINK,
                 [cls.white]: color === ColorEnum.WHITE,
                 [cls.black]: color === ColorEnum.BLACK,
-
+                [cls.text]: color === ColorEnum.TEXT,
 
                 [cls.primaryBg]: bgColor === ColorEnum.PRIMARY,
                 [cls.secondaryBg]: bgColor === ColorEnum.SECONDARY,
@@ -44,6 +44,8 @@ export const Button = (
                 [cls.linkBg]: bgColor === ColorEnum.LINK,
                 [cls.whiteBg]: bgColor === ColorEnum.WHITE,
                 [cls.blackBg]: bgColor === ColorEnum.BLACK,
+                [cls.bg]: bgColor === ColorEnum.BG,
+                [cls.bgDark]: bgColor === ColorEnum.DARKBG,
 
 
                 // РАЗМЕР

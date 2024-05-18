@@ -1,0 +1,10 @@
+.icon {
+  padding: 10px;
+  background-color: var(--bg-dark);
+  border-radius: 50%;
+  & svg {
+    width: 30px;
+    height: 30px;
+    fill: var(--white);
+  }
+}

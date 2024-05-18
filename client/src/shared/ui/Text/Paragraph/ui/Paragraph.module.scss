@@ -34,6 +34,9 @@
   &.black {
     color: var(--black);
   }
+  &.text {
+    color: var(--text);
+  }
 
   &.h1 {
     font: var(--paragraph-1);

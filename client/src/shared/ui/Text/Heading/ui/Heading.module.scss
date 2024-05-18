@@ -35,6 +35,10 @@
     color: var(--black);
   }
 
+  &.text {
+    color: var(--text);
+  }
+
   &.h1 {
     font: var(--heading-1);
   }

@@ -28,6 +28,7 @@ export const Heading = (
                         [cls.link]: color === ColorEnum.LINK,
                         [cls.white]: color === ColorEnum.WHITE,
                         [cls.black]: color === ColorEnum.BLACK,
+                        [cls.text]: color === ColorEnum.TEXT,
                         // РАЗМЕРЫ
                         [cls.h1]: size === SizeEnum.H1,
 
@@ -63,6 +64,7 @@ export const Heading = (
                         [cls.link]: color === ColorEnum.LINK,
                         [cls.white]: color === ColorEnum.WHITE,
                         [cls.black]: color === ColorEnum.BLACK,
+                        [cls.text]: color === ColorEnum.TEXT,
                         // РАЗМЕРЫ
                         [cls.h2]: size === SizeEnum.H2,
 
@@ -98,6 +100,7 @@ export const Heading = (
                         [cls.link]: color === ColorEnum.LINK,
                         [cls.white]: color === ColorEnum.WHITE,
                         [cls.black]: color === ColorEnum.BLACK,
+                        [cls.text]: color === ColorEnum.TEXT,
                         // РАЗМЕРЫ
                         [cls.h3]: size === SizeEnum.H3,
 
@@ -133,6 +136,7 @@ export const Heading = (
                         [cls.link]: color === ColorEnum.LINK,
                         [cls.white]: color === ColorEnum.WHITE,
                         [cls.black]: color === ColorEnum.BLACK,
+                        [cls.text]: color === ColorEnum.TEXT,
                         // РАЗМЕРЫ
                         [cls.h4]: size === SizeEnum.H4,
 
@@ -168,6 +172,7 @@ export const Heading = (
                         [cls.link]: color === ColorEnum.LINK,
                         [cls.white]: color === ColorEnum.WHITE,
                         [cls.black]: color === ColorEnum.BLACK,
+                        [cls.text]: color === ColorEnum.TEXT,
                         // РАЗМЕРЫ
                         [cls.h5]: size === SizeEnum.H5,
 
@@ -203,6 +208,7 @@ export const Heading = (
                         [cls.link]: color === ColorEnum.LINK,
                         [cls.white]: color === ColorEnum.WHITE,
                         [cls.black]: color === ColorEnum.BLACK,
+                        [cls.text]: color === ColorEnum.TEXT,
                         // РАЗМЕРЫ
                         [cls.h6]: size === SizeEnum.H6,
 
