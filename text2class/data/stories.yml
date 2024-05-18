@@ -2,29 +2,71 @@ version: "3.1"
 
 stories:
 
-- story: happy path
+- story: Сексуальное домогательство
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
+  - intent: porno
+  - action: utter_porno
 
-- story: sad path 1
+- story: Ненормативная лексика
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
+  - intent: bad_words
+  - action: utter_bad_words
 
-- story: sad path 2
+- story: Опасные для здоровья действия
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
+  - intent: danger
+  - action: utter_danger
+
+- story: Агрессия
+  steps:
+  - intent: aggression
+  - action: utter_aggression
+
+- story: Рекламмные объявления
+  steps:
+  - intent: adds
+  - action: utter_adds
+
+- story: Секты
+  steps:
+  - intent: sect
+  - action: utter_sect
+
+- story: Пропаганда наркотиков
+  steps:
+  - intent: drugs
+  - action: utter_drugs
+
+- story: Пропаганда ЛГБТ
+  steps:
+  - intent: lgbt
+  - action: utter_lgbt
+
+- story: Номальный ответ
+  steps:
+  - intent: normal
+  - action: utter_normal
+
+
+
+
+
+#- story: sad path 1
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: mood_unhappy
+#  - action: utter_cheer_up
+#  - action: utter_did_that_help
+#  - intent: affirm
+#  - action: utter_happy
+#
+#- story: sad path 2
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: mood_unhappy
+#  - action: utter_cheer_up
+#  - action: utter_did_that_help
+#  - intent: deny
+#  - action: utter_goodbye
