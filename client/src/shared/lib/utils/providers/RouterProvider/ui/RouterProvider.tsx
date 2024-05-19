@@ -1,6 +1,16 @@
 import { createBrowserRouter, redirect } from 'react-router-dom';
-import { CategoriesPage, FilterPage, LoginPage, MainPage, NewUserPage, RegisterPage, UserPage } from '@pages/ui';
+import {
+    CategoriesPage,
+    FilterPage,
+    LoginPage,
+    MainPage,
+    NewUserPage,
+    RegisterPage,
+    StatisticsPage,
+    UserPage,
+} from '@pages/ui';
 import { BottomNavigation } from '@widgets/ui';
+import { NewUserAuth } from '@pages/ui/NewUserAuth';
 
 export const router = createBrowserRouter([
     {
@@ -10,6 +20,10 @@ export const router = createBrowserRouter([
             {
                 index: true,
                 element: <MainPage />,
+            },
+            {
+                path: 'statistics',
+                element: <StatisticsPage />,
             },
             {
                 path: 'user',
@@ -53,6 +67,10 @@ export const router = createBrowserRouter([
             {
                 path: 'register',
                 element: <RegisterPage />,
+            },
+            {
+                path: 'new',
+                element: <NewUserAuth />,
             },
         ],
     },

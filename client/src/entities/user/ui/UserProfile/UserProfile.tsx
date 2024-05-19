@@ -1,8 +1,10 @@
 import cls from './UserProfile.module.scss';
 import { Button, Notifications, Text, ThemeSwitcher } from '@shared/ui';
-import { ColorEnum, SizeEnum, WeightEnum } from '@shared/lib';
+import { ColorEnum, SizeEnum, useAppSelector, WeightEnum } from '@shared/lib';
+import { selectCurrentUser } from '@features/auth';
 
 export const UserProfile = () => {
+    const user = useAppSelector(selectCurrentUser);
     return (
         <div className={cls.wrapper}>
             <div className={cls.info}>
@@ -23,7 +25,7 @@ export const UserProfile = () => {
                     weight={WeightEnum.MEDIUM}
                     size={SizeEnum.H4}
                 >
-                    Жмышенко Валерий Альбертович
+                    {user && user.full_name}
                 </Text.Heading>
                 <Button
                     color={ColorEnum.TEXT}

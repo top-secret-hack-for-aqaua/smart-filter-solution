@@ -16,3 +16,7 @@ export interface IRegisterRequest extends IAuthRequest {
     full_name: string;
     confirm_password: string;
 }
+
+export interface INewUserRequest {
+    name: string;
+}

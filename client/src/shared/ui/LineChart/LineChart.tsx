@@ -1,5 +1,7 @@
 import cls from './LineChart.module.scss';
 import { Line, LineConfig } from '@ant-design/plots';
+import { Text } from '@shared/ui';
+import { ColorEnum, SizeEnum } from '@shared/lib';
 
 export const LineChart = () => {
     const data = [
@@ -15,12 +17,18 @@ export const LineChart = () => {
     ];
     const config: LineConfig = {
         data,
-        height: 200,
+        height: 300,
         xField: 'year',
         yField: 'value',
     };
     return (
         <div className={cls.lineChart}>
+            <Text.Heading
+                size={SizeEnum.H5}
+                color={ColorEnum.TEXT}
+            >
+                Время просмотра
+            </Text.Heading>
             <Line
                 {...config}
             />
