@@ -6,8 +6,8 @@ from typing import Annotated
 from src.database import Base
 from sqlalchemy.sql import expression
 from sqlalchemy.ext.compiler import compiles
-from sqlalchemy import ForeignKey,UniqueConstraint
-from sqlalchemy.orm import relationship, mapped_column, Mapped
+from sqlalchemy import ForeignKey
+from sqlalchemy.orm import mapped_column, Mapped
 
 class utcnow(expression.FunctionElement):
     type = DateTime()
@@ -43,11 +43,21 @@ class VideoVideoCategory(Base):
 class Video(Base, VideoMixin):
     __tablename__ = "video"
     name: Mapped[str]
+    url: Mapped[str] = mapped_column(nullable=True)
 
 class ChildrenRejections(Base):
     __tablename__ = "childrenrejections"
     children_name: Mapped[str] = mapped_column(ForeignKey("childrens.name"),primary_key=True, nullable=False)
     category_name: Mapped[str] = mapped_column(ForeignKey("videocategory.name"),primary_key=True, nullable=False)
 
+class HistoryWatch(Base):
+    __tablename__ = "historywatch"
+    video_id: Mapped[int] = mapped_column(ForeignKey("video.id"),primary_key=True, nullable=False)
+    children_name: Mapped[str] = mapped_column(ForeignKey("childrens.name"),primary_key=True, nullable=False)
+    created_at: Mapped[created_at]
 
-
+# class StatsForChildren(Base):
+#     __tablename__ = "statsforchildren"
+#     children_name: Mapped[str] = mapped_column(ForeignKey("childrens.name"),primary_key=True, nullable=False)
+#     video_id: Mapped[int] = mapped_column(ForeignKey("video.id"),primary_key=True, nullable=False)
+#     created_at: Mapped[created_at]

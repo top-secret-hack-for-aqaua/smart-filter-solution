@@ -1,0 +1,328 @@
+[0;1;32m●[0m exizman-super-computer
+    State: [0;1;32mrunning[0m
+    Units: 607 loaded (incl. loaded aliases)
+     Jobs: 0 queued
+   Failed: 0 units
+    Since: Fri 2024-05-17 12:31:32 MSK; 1 day 13h ago
+  systemd: 255.4-1ubuntu8
+   CGroup: /
+           ├─init.scope
+           │ └─[0;38;5;245m1 /sbin/init splash[0m
+           ├─system.slice
+           │ ├─ModemManager.service
+           │ │ └─[0;38;5;245m1185 /usr/sbin/ModemManager[0m
+           │ ├─NetworkManager.service
+           │ │ └─[0;38;5;245m1054 /usr/sbin/NetworkManager --no-daemon[0m
+           │ ├─accounts-daemon.service
+           │ │ └─[0;38;5;245m1036 /usr/libexec/accounts-daemon[0m
+           │ ├─avahi-daemon.service
+           │ │ ├─[0;38;5;245m1008 "avahi-daemon: running [exizman-super-computer.local]"[0m
+           │ │ └─[0;38;5;245m1049 "avahi-daemon: chroot helper"[0m
+           │ ├─bluetooth.service
+           │ │ └─[0;38;5;245m1009 /usr/libexec/bluetooth/bluetoothd[0m
+           │ ├─colord.service
+           │ │ └─[0;38;5;245m2033 /usr/libexec/colord[0m
+           │ ├─containerd.service
+           │ │ └─[0;38;5;245m1464 /usr/bin/containerd[0m
+           │ ├─cron.service
+           │ │ └─[0;38;5;245m1038 /usr/sbin/cron -f -P[0m
+           │ ├─cups-browsed.service
+           │ │ └─[0;38;5;245m104709 /usr/sbin/cups-browsed[0m
+           │ ├─cups.service
+           │ │ └─[0;38;5;245m104704 /usr/sbin/cupsd -l[0m
+           │ ├─dbus.service
+           │ │ └─[0;38;5;245m1010 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only[0m
+           │ ├─docker.service
+           │ │ └─[0;38;5;245m1806 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock[0m
+           │ ├─fwupd.service
+           │ │ └─[0;38;5;245m41615 /usr/libexec/fwupd/fwupd[0m
+           │ ├─gdm.service
+           │ │ └─[0;38;5;245m1503 /usr/sbin/gdm3[0m
+           │ ├─gnome-remote-desktop.service
+           │ │ └─[0;38;5;245m1013 /usr/libexec/gnome-remote-desktop-daemon --system[0m
+           │ ├─kerneloops.service
+           │ │ ├─[0;38;5;245m1817 /usr/sbin/kerneloops --test[0m
+           │ │ └─[0;38;5;245m1822 /usr/sbin/kerneloops[0m
+           │ ├─krakend.service
+           │ │ └─[0;38;5;245m108210 /usr/bin/krakend run -c /etc/krakend/krakend.json[0m
+           │ ├─nvidia-persistenced.service
+           │ │ └─[0;38;5;245m1028 /usr/bin/nvidia-persistenced --user nvidia-persistenced --no-persistence-mode --verbose[0m
+           │ ├─polkit.service
+           │ │ └─[0;38;5;245m1019 /usr/lib/polkit-1/polkitd --no-debug[0m
+           │ ├─power-profiles-daemon.service
+           │ │ └─[0;38;5;245m1023 /usr/libexec/power-profiles-daemon[0m
+           │ ├─redis-server.service
+           │ │ └─[0;38;5;245m109812 "/usr/bin/redis-server 127.0.0.1:6379"[0m
+           │ ├─rsyslog.service
+           │ │ └─[0;38;5;245m1117 /usr/sbin/rsyslogd -n -iNONE[0m
+           │ ├─rtkit-daemon.service
+           │ │ └─[0;38;5;245m1640 /usr/libexec/rtkit-daemon[0m
+           │ ├─snap.cups.cups-browsed.service
+           │ │ ├─[0;38;5;245m  1449 /bin/sh /snap/cups/1047/scripts/run-cups-browsed[0m
+           │ │ ├─[0;38;5;245m  1736 /bin/sh /snap/cups/1047/scripts/run-cups-browsed[0m
+           │ │ └─[0;38;5;245m106590 sleep 3600[0m
+           │ ├─snap.cups.cupsd.service
+           │ │ ├─[0;38;5;245m1451 /bin/sh /snap/cups/1047/scripts/run-cupsd[0m
+           │ │ └─[0;38;5;245m1709 cupsd -f -s /var/snap/cups/common/etc/cups/cups-files.conf -c /var/snap/cups/common/etc/cups/cupsd.conf[0m
+           │ ├─snapd.service
+           │ │ └─[0;38;5;245m1030 /usr/lib/snapd/snapd[0m
+           │ ├─switcheroo-control.service
+           │ │ └─[0;38;5;245m1039 /usr/libexec/switcheroo-control[0m
+           │ ├─system-postgresql.slice
+           │ │ └─postgresql@16-main.service
+           │ │   ├─[0;38;5;245m  1504 /usr/lib/postgresql/16/bin/postgres -D /var/lib/postgresql/16/main -c config_file=/etc/postgresql/16/main/postgresql.conf[0m
+           │ │   ├─[0;38;5;245m  1518 "postgres: 16/main: checkpointer "[0m
+           │ │   ├─[0;38;5;245m  1519 "postgres: 16/main: background writer "[0m
+           │ │   ├─[0;38;5;245m  1521 "postgres: 16/main: walwriter "[0m
+           │ │   ├─[0;38;5;245m  1522 "postgres: 16/main: autovacuum launcher "[0m
+           │ │   ├─[0;38;5;245m  1523 "postgres: 16/main: logical replication launcher "[0m
+           │ │   ├─[0;38;5;245m 23440 "postgres: 16/main: postgres postgres [local] idle"[0m
+           │ │   ├─[0;38;5;245m 38508 "postgres: 16/main: postgres postgres [local] idle"[0m
+           │ │   └─[0;38;5;245m106730 "postgres: 16/main: postgres postgres 127.0.0.1(40850) idle"[0m
+           │ ├─systemd-journald.service
+           │ │ └─[0;38;5;245m373 /usr/lib/systemd/systemd-journald[0m
+           │ ├─systemd-logind.service
+           │ │ └─[0;38;5;245m1032 /usr/lib/systemd/systemd-logind[0m
+           │ ├─systemd-oomd.service
+           │ │ └─[0;38;5;245m898 /usr/lib/systemd/systemd-oomd[0m
+           │ ├─systemd-resolved.service
+           │ │ └─[0;38;5;245m899 /usr/lib/systemd/systemd-resolved[0m
+           │ ├─systemd-timesyncd.service
+           │ │ └─[0;38;5;245m900 /usr/lib/systemd/systemd-timesyncd[0m
+           │ ├─systemd-udevd.service
+           │ │ └─udev
+           │ │   └─[0;38;5;245m412 /usr/lib/systemd/systemd-udevd[0m
+           │ ├─udisks2.service
+           │ │ └─[0;38;5;245m1042 /usr/libexec/udisks2/udisksd[0m
+           │ ├─unattended-upgrades.service
+           │ │ └─[0;38;5;245m1453 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal[0m
+           │ ├─upower.service
+           │ │ └─[0;38;5;245m2163 /usr/libexec/upowerd[0m
+           │ └─wpa_supplicant.service
+           │   └─[0;38;5;245m1056 /usr/sbin/wpa_supplicant -u -s -O "DIR=/run/wpa_supplicant GROUP=netdev"[0m
+           └─user.slice
+             └─user-1000.slice
+               ├─session-2.scope
+               │ ├─[0;38;5;245m2448 "gdm-session-worker [pam/gdm-password]"[0m
+               │ ├─[0;38;5;245m2589 /usr/libexec/gdm-x-session --run-script "env GNOME_SHELL_SESSION_MODE=ubuntu /usr/bin/gnome-session --session=ubuntu"[0m
+               │ ├─[0;38;5;245m2591 /usr/lib/xorg/Xorg vt2 -displayfd 3 -auth /run/user/1000/gdm/Xauthority -nolisten tcp -background none -noreset -keeptty -novtswitch -verbose 3[0m
+               │ └─[0;38;5;245m2688 /usr/libexec/gnome-session-binary --session=ubuntu[0m
+               └─user@1000.service
+                 ├─app.slice
+                 │ ├─app-gnome-org.gnome.Evolution\x2dalarm\x2dnotify-3169.scope
+                 │ │ └─[0;38;5;245m3169 /usr/libexec/evolution-data-server/evolution-alarm-notify[0m
+                 │ ├─app-gnome-org.gnome.SettingsDaemon.DiskUtilityNotify-3130.scope
+                 │ │ └─[0;38;5;245m3130 /usr/libexec/gsd-disk-utility-notify[0m
+                 │ ├─app-gnome-update\x2dnotifier-3935.scope
+                 │ │ └─[0;38;5;245m3935 /usr/bin/update-notifier[0m
+                 │ ├─app-gnome-yelp-93145.scope
+                 │ │ ├─[0;38;5;245m93145 /usr/bin/yelp[0m
+                 │ │ ├─[0;38;5;245m93203 /usr/lib/x86_64-linux-gnu/webkit2gtk-4.1/WebKitNetworkProcess 13 31[0m
+                 │ │ └─[0;38;5;245m93208 /usr/lib/x86_64-linux-gnu/webkit2gtk-4.1/WebKitWebProcess 17 34[0m
+                 │ ├─app-gnome\x2dsession\x2dmanager.slice
+                 │ │ └─gnome-session-manager@ubuntu.service
+                 │ │   └─[0;38;5;245m2874 /usr/libexec/gnome-session-binary --systemd-service --session=ubuntu[0m
+                 │ ├─app-org.gnome.Terminal.slice
+                 │ │ ├─gnome-terminal-server.service
+                 │ │ │ └─[0;38;5;245m3909 /usr/libexec/gnome-terminal-server[0m
+                 │ │ ├─vte-spawn-28ea0eef-1e66-4579-9076-bd7bc817d0ef.scope
+                 │ │ │ └─[0;38;5;245m96633 bash[0m
+                 │ │ ├─vte-spawn-62012bea-d45d-49e7-a862-56dd43f27cd1.scope
+                 │ │ │ ├─[0;38;5;245m110647 bash[0m
+                 │ │ │ ├─[0;38;5;245m111369 systemctl status[0m
+                 │ │ │ └─[0;38;5;245m111370 pager[0m
+                 │ │ ├─vte-spawn-71647c83-eb65-486e-a6bd-086245a8ba0e.scope
+                 │ │ │ └─[0;38;5;245m3922 bash[0m
+                 │ │ ├─vte-spawn-7c98419f-35a9-4102-aeda-c656f18b8668.scope
+                 │ │ │ ├─[0;38;5;245m23424 bash[0m
+                 │ │ │ ├─[0;38;5;245m23434 su postgres[0m
+                 │ │ │ ├─[0;38;5;245m23435 bash[0m
+                 │ │ │ ├─[0;38;5;245m23437 /usr/lib/postgresql/16/bin/psql[0m
+                 │ │ │ ├─[0;38;5;245m38380 sh -c -- pager[0m
+                 │ │ │ ├─[0;38;5;245m38381 pager[0m
+                 │ │ │ └─[0;38;5;245m38505 /usr/lib/postgresql/16/bin/psql[0m
+                 │ │ ├─vte-spawn-c7ca9926-c076-48df-b8a9-be65e46b1b48.scope
+                 │ │ │ └─[0;38;5;245m83473 bash[0m
+                 │ │ └─vte-spawn-f4186a38-6be3-4c0b-9b57-8d8b276a187e.scope
+                 │ │   ├─[0;38;5;245m 83503 bash[0m
+                 │ │   ├─[0;38;5;245m107264 sudo -i[0m
+                 │ │   ├─[0;38;5;245m107266 sudo -i[0m
+                 │ │   └─[0;38;5;245m107267 -bash[0m
+                 │ ├─dconf.service
+                 │ │ └─[0;38;5;245m3451 /usr/libexec/dconf-service[0m
+                 │ ├─evolution-addressbook-factory.service
+                 │ │ └─[0;38;5;245m3338 /usr/libexec/evolution-addressbook-factory[0m
+                 │ ├─evolution-calendar-factory.service
+                 │ │ └─[0;38;5;245m3282 /usr/libexec/evolution-calendar-factory[0m
+                 │ ├─evolution-source-registry.service
+                 │ │ └─[0;38;5;245m3020 /usr/libexec/evolution-source-registry[0m
+                 │ ├─gcr-ssh-agent.service
+                 │ │ └─[0;38;5;245m2848 /usr/libexec/gcr-ssh-agent --base-dir /run/user/1000/gcr[0m
+                 │ ├─gnome-keyring-daemon.service
+                 │ │ ├─[0;38;5;245m 2483 /usr/bin/gnome-keyring-daemon --foreground --components=pkcs11,secrets --control-directory=/run/user/1000/keyring[0m
+                 │ │ └─[0;38;5;245m81184 /usr/bin/ssh-agent -D -a /run/user/1000/keyring/.ssh[0m
+                 │ ├─gnome-session-monitor.service
+                 │ │ └─[0;38;5;245m2849 /usr/libexec/gnome-session-ctl --monitor[0m
+                 │ ├─obex.service
+                 │ │ └─[0;38;5;245m3821 /usr/libexec/bluetooth/obexd[0m
+                 │ ├─snap.firefox.firefox-46e39ac2-b14d-4205-9676-54956e9192e4.scope
+                 │ │ ├─[0;38;5;245m 32284 /snap/firefox/4173/usr/lib/firefox/firefox[0m
+                 │ │ ├─[0;38;5;245m 32430 /snap/firefox/4173/usr/lib/firefox/firefox -contentproc -parentBuildID 20240419214016 -prefsLen 30649 -prefMapSize 242197 -appDir /snap/firefox/4173/usr/lib/firefox/browser {4f5972d7-b29d-4890-a2a1-53166cf956ff} 32284 true socket[0m
+                 │ │ ├─[0;38;5;245m 32454 /snap/firefox/4173/usr/lib/firefox/firefox -contentproc -childID 1 -isForBrowser -prefsLen 30790 -prefMapSize 242197 -jsInitLen 234952 -parentBuildID 20240419214016 -greomni /snap/firefox/4173/usr/lib/firefox/omni.ja -appomni /snap/firefox/4173/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/4173/usr/lib/firefox/browser {06bb5f8c-7764-46a5-a7e4-75ec2cf7161a} 32284 true tab[0m
+                 │ │ ├─[0;38;5;245m 32646 /snap/firefox/4173/usr/lib/firefox/firefox -contentproc -childID 2 -isForBrowser -prefsLen 36440 -prefMapSize 242197 -jsInitLen 234952 -parentBuildID 20240419214016 -greomni /snap/firefox/4173/usr/lib/firefox/omni.ja -appomni /snap/firefox/4173/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/4173/usr/lib/firefox/browser {ab0a518e-bf0d-4a4f-95de-d2cb1a9181c9} 32284 true tab[0m
+                 │ │ ├─[0;38;5;245m 32995 /snap/firefox/4173/usr/lib/firefox/firefox -contentproc -parentBuildID 20240419214016 -sandboxingKind 0 -prefsLen 36440 -prefMapSize 242197 -appDir /snap/firefox/4173/usr/lib/firefox/browser {f6a3cb75-35b4-46f2-bca5-f62059f3dc47} 32284 true utility[0m
+                 │ │ ├─[0;38;5;245m 35487 /snap/firefox/4173/usr/lib/firefox/firefox -contentproc -parentBuildID 20240419214016 -prefsLen 34828 -prefMapSize 242197 -appDir /snap/firefox/4173/usr/lib/firefox/browser {47354905-b584-4e43-a84e-e5b98303a415} 32284 true rdd[0m
+                 │ │ ├─[0;38;5;245m 39107 /snap/firefox/4173/usr/lib/firefox/firefox -contentproc -childID 29 -isForBrowser -prefsLen 31315 -prefMapSize 242197 -jsInitLen 234952 -parentBuildID 20240419214016 -greomni /snap/firefox/4173/usr/lib/firefox/omni.ja -appomni /snap/firefox/4173/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/4173/usr/lib/firefox/browser {f7398be7-10ca-4a68-940f-5d38d523804e} 32284 true tab[0m
+                 │ │ ├─[0;38;5;245m 43843 /snap/firefox/4173/usr/lib/firefox/firefox -contentproc -childID 37 -isForBrowser -prefsLen 31316 -prefMapSize 242197 -jsInitLen 234952 -parentBuildID 20240419214016 -greomni /snap/firefox/4173/usr/lib/firefox/omni.ja -appomni /snap/firefox/4173/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/4173/usr/lib/firefox/browser {31f95cd8-a8a7-442a-b782-4921e8b5fb61} 32284 true tab[0m
+                 │ │ ├─[0;38;5;245m 51870 /snap/firefox/4173/usr/lib/firefox/firefox -contentproc -childID 42 -isForBrowser -prefsLen 32293 -prefMapSize 242197 -jsInitLen 234952 -parentBuildID 20240419214016 -greomni /snap/firefox/4173/usr/lib/firefox/omni.ja -appomni /snap/firefox/4173/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/4173/usr/lib/firefox/browser {a80f1256-94f8-40c5-a6d9-57e487e483bc} 32284 true tab[0m
+                 │ │ ├─[0;38;5;245m 56174 /snap/firefox/4173/usr/lib/firefox/firefox -contentproc -childID 52 -isForBrowser -prefsLen 32293 -prefMapSize 242197 -jsInitLen 234952 -parentBuildID 20240419214016 -greomni /snap/firefox/4173/usr/lib/firefox/omni.ja -appomni /snap/firefox/4173/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/4173/usr/lib/firefox/browser {ce92f449-fa48-4176-9ad9-3571fed60cab} 32284 true tab[0m
+                 │ │ ├─[0;38;5;245m 68469 /snap/firefox/4173/usr/lib/firefox/firefox -contentproc -childID 54 -isForBrowser -prefsLen 32293 -prefMapSize 242197 -jsInitLen 234952 -parentBuildID 20240419214016 -greomni /snap/firefox/4173/usr/lib/firefox/omni.ja -appomni /snap/firefox/4173/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/4173/usr/lib/firefox/browser {51c8bb30-6e14-44e1-82c8-347dca453d3a} 32284 true tab[0m
+                 │ │ ├─[0;38;5;245m 79928 /snap/firefox/4173/usr/lib/firefox/firefox -contentproc -childID 58 -isForBrowser -prefsLen 32350 -prefMapSize 242197 -jsInitLen 234952 -parentBuildID 20240419214016 -greomni /snap/firefox/4173/usr/lib/firefox/omni.ja -appomni /snap/firefox/4173/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/4173/usr/lib/firefox/browser {92a9561e-85dd-46b6-9d10-7bd5edb3d513} 32284 true tab[0m
+                 │ │ ├─[0;38;5;245m 80061 /snap/firefox/4173/usr/lib/firefox/firefox -contentproc -childID 60 -isForBrowser -prefsLen 32350 -prefMapSize 242197 -jsInitLen 234952 -parentBuildID 20240419214016 -greomni /snap/firefox/4173/usr/lib/firefox/omni.ja -appomni /snap/firefox/4173/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/4173/usr/lib/firefox/browser {7e4e27e5-0bf4-4529-ba51-37b9905d1ae2} 32284 true tab[0m
+                 │ │ ├─[0;38;5;245m 80372 /snap/firefox/4173/usr/lib/firefox/firefox -contentproc -childID 63 -isForBrowser -prefsLen 32350 -prefMapSize 242197 -jsInitLen 234952 -parentBuildID 20240419214016 -greomni /snap/firefox/4173/usr/lib/firefox/omni.ja -appomni /snap/firefox/4173/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/4173/usr/lib/firefox/browser {f5c40595-0fb1-47c9-8923-6ad6a0b6974f} 32284 true tab[0m
+                 │ │ ├─[0;38;5;245m 80439 /snap/firefox/4173/usr/lib/firefox/firefox -contentproc -childID 64 -isForBrowser -prefsLen 32350 -prefMapSize 242197 -jsInitLen 234952 -parentBuildID 20240419214016 -greomni /snap/firefox/4173/usr/lib/firefox/omni.ja -appomni /snap/firefox/4173/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/4173/usr/lib/firefox/browser {24a691f4-fb78-4159-9d42-6f804988f402} 32284 true tab[0m
+                 │ │ ├─[0;38;5;245m 80933 /snap/firefox/4173/usr/lib/firefox/firefox -contentproc -childID 70 -isForBrowser -prefsLen 32403 -prefMapSize 242197 -jsInitLen 234952 -parentBuildID 20240419214016 -greomni /snap/firefox/4173/usr/lib/firefox/omni.ja -appomni /snap/firefox/4173/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/4173/usr/lib/firefox/browser {265fc23c-70f9-4d08-acdf-cf505a9a69bf} 32284 true tab[0m
+                 │ │ ├─[0;38;5;245m 96125 /snap/firefox/4173/usr/lib/firefox/firefox -contentproc -childID 82 -isForBrowser -prefsLen 32403 -prefMapSize 242197 -jsInitLen 234952 -parentBuildID 20240419214016 -greomni /snap/firefox/4173/usr/lib/firefox/omni.ja -appomni /snap/firefox/4173/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/4173/usr/lib/firefox/browser {147f6a51-8a57-439e-864d-c41f4c005aea} 32284 true tab[0m
+                 │ │ ├─[0;38;5;245m 96200 /snap/firefox/4173/usr/lib/firefox/firefox -contentproc -childID 83 -isForBrowser -prefsLen 32403 -prefMapSize 242197 -jsInitLen 234952 -parentBuildID 20240419214016 -greomni /snap/firefox/4173/usr/lib/firefox/omni.ja -appomni /snap/firefox/4173/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/4173/usr/lib/firefox/browser {85228207-2dfc-48c5-a5a7-08d4128df263} 32284 true tab[0m
+                 │ │ ├─[0;38;5;245m 96309 /snap/firefox/4173/usr/lib/firefox/firefox -contentproc -childID 85 -isForBrowser -prefsLen 32403 -prefMapSize 242197 -jsInitLen 234952 -parentBuildID 20240419214016 -greomni /snap/firefox/4173/usr/lib/firefox/omni.ja -appomni /snap/firefox/4173/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/4173/usr/lib/firefox/browser {305215e9-27da-43e7-9dc2-fe0c53210d2b} 32284 true tab[0m
+                 │ │ ├─[0;38;5;245m101178 /snap/firefox/4173/usr/lib/firefox/firefox -contentproc -childID 91 -isForBrowser -prefsLen 32471 -prefMapSize 242197 -jsInitLen 234952 -parentBuildID 20240419214016 -greomni /snap/firefox/4173/usr/lib/firefox/omni.ja -appomni /snap/firefox/4173/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/4173/usr/lib/firefox/browser {73483f4f-4e9e-494b-9ec5-cb1a91507794} 32284 true tab[0m
+                 │ │ ├─[0;38;5;245m101225 /snap/firefox/4173/usr/lib/firefox/firefox -contentproc -childID 92 -isForBrowser -prefsLen 32471 -prefMapSize 242197 -jsInitLen 234952 -parentBuildID 20240419214016 -greomni /snap/firefox/4173/usr/lib/firefox/omni.ja -appomni /snap/firefox/4173/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/4173/usr/lib/firefox/browser {1d640a0b-98af-4400-9bec-cb95083dd4e5} 32284 true tab[0m
+                 │ │ ├─[0;38;5;245m107144 /snap/firefox/4173/usr/lib/firefox/firefox -contentproc -childID 97 -isForBrowser -prefsLen 32471 -prefMapSize 242197 -jsInitLen 234952 -parentBuildID 20240419214016 -greomni /snap/firefox/4173/usr/lib/firefox/omni.ja -appomni /snap/firefox/4173/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/4173/usr/lib/firefox/browser {138386fd-c0e5-4e73-9182-d74f6c4ad897} 32284 true tab[0m
+                 │ │ ├─[0;38;5;245m108314 /snap/firefox/4173/usr/lib/firefox/firefox -contentproc -childID 101 -isForBrowser -prefsLen 32471 -prefMapSize 242197 -jsInitLen 234952 -parentBuildID 20240419214016 -greomni /snap/firefox/4173/usr/lib/firefox/omni.ja -appomni /snap/firefox/4173/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/4173/usr/lib/firefox/browser {3906d7aa-efd4-40d4-9ef3-075ac2a34c76} 32284 true tab[0m
+                 │ │ ├─[0;38;5;245m108554 /snap/firefox/4173/usr/lib/firefox/firefox -contentproc -childID 109 -isForBrowser -prefsLen 32471 -prefMapSize 242197 -jsInitLen 234952 -parentBuildID 20240419214016 -greomni /snap/firefox/4173/usr/lib/firefox/omni.ja -appomni /snap/firefox/4173/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/4173/usr/lib/firefox/browser {3f6dc36d-6bea-4036-9069-88bbbb16c068} 32284 true tab[0m
+                 │ │ ├─[0;38;5;245m108577 /snap/firefox/4173/usr/lib/firefox/firefox -contentproc -childID 110 -isForBrowser -prefsLen 32471 -prefMapSize 242197 -jsInitLen 234952 -parentBuildID 20240419214016 -greomni /snap/firefox/4173/usr/lib/firefox/omni.ja -appomni /snap/firefox/4173/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/4173/usr/lib/firefox/browser {8cb5c07c-63ff-4888-92a3-e562bb8788f4} 32284 true tab[0m
+                 │ │ ├─[0;38;5;245m110169 /snap/firefox/4173/usr/lib/firefox/firefox -contentproc -childID 119 -isForBrowser -prefsLen 32536 -prefMapSize 242197 -jsInitLen 234952 -parentBuildID 20240419214016 -greomni /snap/firefox/4173/usr/lib/firefox/omni.ja -appomni /snap/firefox/4173/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/4173/usr/lib/firefox/browser {7b728411-7ed7-44df-bbc3-2025ceaf8f52} 32284 true tab[0m
+                 │ │ ├─[0;38;5;245m111134 /snap/firefox/4173/usr/lib/firefox/firefox -contentproc -childID 126 -isForBrowser -prefsLen 32536 -prefMapSize 242197 -jsInitLen 234952 -parentBuildID 20240419214016 -greomni /snap/firefox/4173/usr/lib/firefox/omni.ja -appomni /snap/firefox/4173/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/4173/usr/lib/firefox/browser {04d21f46-fbc8-4d87-a88a-6a250c14f929} 32284 true tab[0m
+                 │ │ ├─[0;38;5;245m111137 /snap/firefox/4173/usr/lib/firefox/firefox -contentproc -childID 127 -isForBrowser -prefsLen 32536 -prefMapSize 242197 -jsInitLen 234952 -parentBuildID 20240419214016 -greomni /snap/firefox/4173/usr/lib/firefox/omni.ja -appomni /snap/firefox/4173/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/4173/usr/lib/firefox/browser {c52f9b6f-eab3-4eab-b956-ae0df56bf77c} 32284 true tab[0m
+                 │ │ └─[0;38;5;245m111141 /snap/firefox/4173/usr/lib/firefox/firefox -contentproc -childID 128 -isForBrowser -prefsLen 32536 -prefMapSize 242197 -jsInitLen 234952 -parentBuildID 20240419214016 -greomni /snap/firefox/4173/usr/lib/firefox/omni.ja -appomni /snap/firefox/4173/usr/lib/firefox/browser/omni.ja -appDir /snap/firefox/4173/usr/lib/firefox/browser {01500588-2ef1-4fcb-addf-3512cab1adc7} 32284 true tab[0m
+                 │ ├─snap.postman.postman-f056b5a9-4e7d-4296-8bbd-b7b2a98732dd.scope
+                 │ │ ├─[0;38;5;245m34701 "/snap/postman/248/usr/share/postman/postman --no-sandbox --enable-crashpad"[0m
+                 │ │ ├─[0;38;5;245m34875 "/snap/postman/248/usr/share/postman/postman --type=zygote --no-zygote-sandbox --no-sandbox --enable-crashpad --enable-crashpad"[0m
+                 │ │ ├─[0;38;5;245m34876 "/snap/postman/248/usr/share/postman/postman --type=zygote --no-sandbox --enable-crashpad --enable-crashpad"[0m
+                 │ │ ├─[0;38;5;245m34889 /snap/postman/248/usr/share/postman/chrome_crashpad_handler --monitor-self-annotation=ptype=crashpad-handler --database=/home/exizman/snap/postman/248/.config/Postman/Crashpad "--url=https://o1224273.ingest.sentry.io/api/6543787/minidump/?sentry_key=4657359d34004de980b15867cd04eb7a" --annotation=_productName=Postman --annotation=_version=10.24.16 "--annotation=lsb-release=Ubuntu Core 18" --annotation=plat=Linux --annotation=prod=Electron --annotation=ver=20.3.11 --initial-client-fd=42 --shared-client-connection[0m
+                 │ │ ├─[0;38;5;245m34927 "/snap/postman/248/usr/share/postman/postman --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --no-sandbox --enable-crashpad --crashpad-handler-pid=34889 --enable-crash-reporter=2905bfe2-1cf0-45cd-88d0-08e961189625,no_channel --user-data-dir=/home/exizman/snap/postman/248/.config/Postman --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,i,15522768829942869560,11162206582870575314,131072 --disable-features=SpareRendererForSitePerProcess --enable-crashpad"[0m
+                 │ │ ├─[0;38;5;245m34928 "/snap/postman/248/usr/share/postman/postman --type=gpu-process --no-sandbox --enable-crashpad --crashpad-handler-pid=34889 --enable-crash-reporter=2905bfe2-1cf0-45cd-88d0-08e961189625,no_channel --user-data-dir=/home/exizman/snap/postman/248/.config/Postman --gpu-preferences=WAAAAAAAAAAgAAAIAAAAAAAAAAAAAAAAAABgAAAAAAA4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAIAAAAAAAAAABAAAAAAAAAAgAAAAAAAAACAAAAAAAAAAIAAAAAAAAAA== --use-gl=angle --use-angle=swiftshader-webgl --shared-files --field-trial-handle=0,i,15522768829942869560,11162206582870575314,131072 --disable-features=SpareRendererForSitePerProcess"[0m
+                 │ │ ├─[0;38;5;245m35501 "/snap/postman/248/usr/share/postman/postman --type=renderer --enable-crashpad --crashpad-handler-pid=34889 --enable-crash-reporter=2905bfe2-1cf0-45cd-88d0-08e961189625,no_channel --user-data-dir=/home/exizman/snap/postman/248/.config/Postman --app-path=/snap/postman/248/usr/share/postman/resources/app --no-sandbox --no-zygote --no-sandbox --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=11 --launch-time-ticks=22783876392 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,i,15522768829942869560,11162206582870575314,131072 --disable-features=SpareRendererForSitePerProcess --enable-crashpad"[0m
+                 │ │ └─[0;38;5;245m35643 "/snap/postman/248/usr/share/postman/postman --type=renderer --enable-crashpad --crashpad-handler-pid=34889 --enable-crash-reporter=2905bfe2-1cf0-45cd-88d0-08e961189625,no_channel --user-data-dir=/home/exizman/snap/postman/248/.config/Postman --app-path=/snap/postman/248/usr/share/postman/resources/app --no-sandbox --no-zygote --enable-blink-features --disable-blink-features --no-sandbox --disable-gpu-compositing --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=17 --launch-time-ticks=22790399413 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,i,15522768829942869560,11162206582870575314,131072 --disable-features=SpareRendererForSitePerProcess --enable-crashpad"[0m
+                 │ ├─snap.pycharm-community.pycharm-community-4b1471d6-815e-4889-86e9-8c51f3b91eec.scope
+                 │ │ ├─[0;38;5;245m 54108 /snap/pycharm-community/383/jbr/bin/java -classpath /snap/pycharm-community/383/lib/platform-loader.jar:/snap/pycharm-community/383/lib/util-8.jar:/snap/pycharm-community/383/lib/util.jar:/snap/pycharm-community/383/lib/app-client.jar:/snap/pycharm-community/383/lib/util_rt.jar:/snap/pycharm-community/383/lib/opentelemetry.jar:/snap/pycharm-community/383/lib/app.jar:/snap/pycharm-community/383/lib/modules.jar:/snap/pycharm-community/383/lib/lib-client.jar:/snap/pycharm-community/383/lib/stats.jar:/snap/pycharm-community/383/lib/jps-model.jar:/snap/pycharm-community/383/lib/external-system-rt.jar:/snap/pycharm-community/383/lib/rd.jar:/snap/pycharm-community/383/lib/bouncy-castle.jar:/snap/pycharm-community/383/lib/protobuf.jar:/snap/pycharm-community/383/lib/intellij-test-discovery.jar:/snap/pycharm-community/383/lib/intellij-coverage-agent-1.0.744.jar:/snap/pycharm-community/383/lib/forms_rt.jar:/snap/pycharm-community/383/lib/lib.jar:/snap/pycharm-community/383/lib/externalProcess-rt.jar:/snap/pycharm-community/383/lib/groovy.jar:/snap/pycharm-community/383/lib/annotations.jar:/snap/pycharm-community/383/lib/grpc.jar:/snap/pycharm-community/383/lib/jsch-agent.jar:/snap/pycharm-community/383/lib/junit4.jar:/snap/pycharm-community/383/lib/trove.jar -XX:ErrorFile=/home/exizman/java_error_in_pycharm_%p.log -XX:HeapDumpPath=/home/exizman/java_error_in_pycharm_.hprof -Xms256m -Xmx1500m -XX:+HeapDumpOnOutOfMemoryError -XX:-OmitStackTraceInFastThrow -XX:+IgnoreUnrecognizedVMOptions -ea -Dsun.io.useCanonCaches=false -Dsun.java2d.metal=true -Djbr.catch.SIGABRT=true "-Djdk.http.auth.tunneling.disabledSchemes=\"\"" -Djdk.attach.allowAttachSelf=true -Djdk.module.illegalAccess.silent=true -Dkotlinx.coroutines.debug=off -XX:CICompilerCount=2 -XX:ReservedCodeCacheSize=512m -XX:CompileCommand=exclude,com/intellij/openapi/vfs/impl/FilePartNodeRoot,trieDescend -XX:SoftRefLRUPolicyMSPerMB=50 -Dide.show.tips.on.startup.default.value=false -Dsun.tools.attach.tmp.only=true -Dawt.lock.fair=true -Xmx2048m -Djb.vmOptionsFile=/home/exizman/.config/JetBrains/PyCharmCE2024.1/pycharm64.vmoptions -Djava.system.class.loader=com.intellij.util.lang.PathClassLoader -Didea.vendor.name=JetBrains -Didea.paths.selector=PyCharmCE2024.1 -Djna.boot.library.path=/snap/pycharm-community/383/lib/jna/amd64 -Dpty4j.preferred.native.folder=/snap/pycharm-community/383/lib/pty4j -Djna.nosys=true -Djna.noclasspath=true -Dintellij.platform.runtime.repository.path=/snap/pycharm-community/383/modules/module-descriptors.jar -Didea.platform.prefix=PyCharmCore -Dsplash=true -Daether.connector.resumeDownloads=false --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.ref=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/java.nio.charset=ALL-UNNAMED --add-opens=java.base/java.text=ALL-UNNAMED --add-opens=java.base/java.time=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.locks=ALL-UNNAMED --add-opens=java.base/jdk.internal.vm=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.base/sun.nio.fs=ALL-UNNAMED --add-opens=java.base/sun.security.ssl=ALL-UNNAMED --add-opens=java.base/sun.security.util=ALL-UNNAMED --add-opens=java.base/sun.net.dns=ALL-UNNAMED --add-opens=java.desktop/com.sun.java.swing.plaf.gtk=ALL-UNNAMED --add-opens=java.desktop/java.awt=ALL-UNNAMED --add-opens=java.desktop/java.awt.dnd.peer=ALL-UNNAMED --add-opens=java.desktop/java.awt.event=ALL-UNNAMED --add-opens=java.desktop/java.awt.image=ALL-UNNAMED --add-opens=java.desktop/java.awt.peer=ALL-UNNAMED --add-opens=java.desktop/java.awt.font=ALL-UNNAMED --add-opens=java.desktop/javax.swing=ALL-UNNAMED --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED --add-opens=java.desktop/javax.swing.text=ALL-UNNAMED --add-opens=java.desktop/javax.swing.text.html=ALL-UNNAMED --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED --add-opens=java.desktop/sun.awt.datatransfer=ALL-UNNAMED --add-opens=java.desktop/sun.awt.image=ALL-UNNAMED --add-opens=java.desktop/sun.awt=ALL-UNNAMED --add-opens=java.desktop/sun.font=ALL-UNNAMED --add-opens=java.desktop/sun.java2d=ALL-UNNAMED --add-opens=java.desktop/sun.swing=ALL-UNNAMED --add-opens=java.desktop/com.sun.java.swing=ALL-UNNAMED --add-opens=jdk.attach/sun.tools.attach=ALL-UNNAMED --add-opens=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED --add-opens=jdk.internal.jvmstat/sun.jvmstat.monitor=ALL-UNNAMED --add-opens=jdk.jdi/com.sun.tools.jdi=ALL-UNNAMED com.intellij.idea.Main[0m
+                 │ │ ├─[0;38;5;245m 54258 /snap/pycharm-community/383/bin/fsnotifier[0m
+                 │ │ ├─[0;38;5;245m 54310 /bin/bash --rcfile /snap/pycharm-community/383/plugins/terminal/shell-integrations/bash/bash-integration.bash -i[0m
+                 │ │ ├─[0;38;5;245m 54375 /home/exizman/.local/share/JetBrains/PyCharmCE2024.1/codeium/f4ccf0178d5d55b7439fe04a696986fe0deea492/language_server_linux_x64 --api_server_url https://server.codeium.com --manager_dir /tmp/12941077916658374838/codeium/manager --enable_chat_web_server --enable_chat_client --database_dir /home/exizman/.codeium/database/9c0694567290725d9dcba14ade58e297[0m
+                 │ │ ├─[0;38;5;245m 54386 /home/exizman/.local/share/JetBrains/PyCharmCE2024.1/codeium/f4ccf0178d5d55b7439fe04a696986fe0deea492/language_server_linux_x64 --api_server_url https://server.codeium.com --manager_dir /tmp/12941077916658374838/codeium/manager --enable_chat_web_server --enable_chat_client --database_dir /home/exizman/.codeium/database/9c0694567290725d9dcba14ade58e297 --run_child --random_port --random_port_dir=/tmp/12941077916658374838/codeium/manager/child_random_port_1715989942060668899_8629192945590883305 --manager_lock_file=/tmp/12941077916658374838/codeium/manager/locks/manager.lock --child_lock_file /tmp/12941077916658374838/codeium/manager/locks/child_lock_1715989942060733710_8630885630210212790[0m
+                 │ │ ├─[0;38;5;245m 54427 "/snap/pycharm-community/383/jbr/lib/jcef_helper --type=zygote --no-zygote-sandbox --disable-in-process-stack-traces --force-device-scale-factor=1.0 --locales-dir-path=/snap/pycharm-community/383/jbr/lib/locales --log-severity=disable --resources-dir-path=/snap/pycharm-community/383/jbr/lib --lang=en-US --user-data-dir=/home/exizman/.cache/JetBrains/PyCharmCE2024.1/jcef_cache --log-file=/home/exizman/jcef_54108.log"[0m
+                 │ │ ├─[0;38;5;245m 54428 "/snap/pycharm-community/383/jbr/lib/jcef_helper --type=zygote --disable-in-process-stack-traces --force-device-scale-factor=1.0 --locales-dir-path=/snap/pycharm-community/383/jbr/lib/locales --log-severity=disable --resources-dir-path=/snap/pycharm-community/383/jbr/lib --lang=en-US --user-data-dir=/home/exizman/.cache/JetBrains/PyCharmCE2024.1/jcef_cache --log-file=/home/exizman/jcef_54108.log"[0m
+                 │ │ ├─[0;38;5;245m 54430 "/snap/pycharm-community/383/jbr/lib/jcef_helper --type=zygote --disable-in-process-stack-traces --force-device-scale-factor=1.0 --locales-dir-path=/snap/pycharm-community/383/jbr/lib/locales --log-severity=disable --resources-dir-path=/snap/pycharm-community/383/jbr/lib --lang=en-US --user-data-dir=/home/exizman/.cache/JetBrains/PyCharmCE2024.1/jcef_cache --log-file=/home/exizman/jcef_54108.log"[0m
+                 │ │ ├─[0;38;5;245m 54448 "/snap/pycharm-community/383/jbr/lib/jcef_helper --type=gpu-process --locales-dir-path=/snap/pycharm-community/383/jbr/lib/locales --log-severity=disable --resources-dir-path=/snap/pycharm-community/383/jbr/lib --lang=en-US --user-data-dir=/home/exizman/.cache/JetBrains/PyCharmCE2024.1/jcef_cache --gpu-preferences=WAAAAAAAAAAgAAAEAAAAAAAAAAAAAAAAAABgAAAAAAA4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAGAAAAAAAAAAYAAAAAAAAAAgAAAAAAAAACAAAAAAAAAAIAAAAAAAAAA== --disable-in-process-stack-traces --log-file=/home/exizman/jcef_54108.log --shared-files --field-trial-handle=0,i,16014490263416903375,17546964291247595027,262144 --disable-features=SpareRendererForSitePerProcess --variations-seed-version"[0m
+                 │ │ ├─[0;38;5;245m 54500 "/snap/pycharm-community/383/jbr/lib/jcef_helper --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --locales-dir-path=/snap/pycharm-community/383/jbr/lib/locales --log-severity=disable --resources-dir-path=/snap/pycharm-community/383/jbr/lib --lang=en-US --user-data-dir=/home/exizman/.cache/JetBrains/PyCharmCE2024.1/jcef_cache --disable-in-process-stack-traces --log-file=/home/exizman/jcef_54108.log --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,i,16014490263416903375,17546964291247595027,262144 --disable-features=SpareRendererForSitePerProcess --variations-seed-version"[0m
+                 │ │ ├─[0;38;5;245m 54516 "/snap/pycharm-community/383/jbr/lib/jcef_helper --type=utility --utility-sub-type=storage.mojom.StorageService --lang=en-US --service-sandbox-type=utility --locales-dir-path=/snap/pycharm-community/383/jbr/lib/locales --log-severity=disable --resources-dir-path=/snap/pycharm-community/383/jbr/lib --lang=en-US --user-data-dir=/home/exizman/.cache/JetBrains/PyCharmCE2024.1/jcef_cache --disable-in-process-stack-traces --log-file=/home/exizman/jcef_54108.log --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,i,16014490263416903375,17546964291247595027,262144 --disable-features=SpareRendererForSitePerProcess --variations-seed-version"[0m
+                 │ │ ├─[0;38;5;245m 54523 "/snap/pycharm-community/383/jbr/lib/jcef_helper --type=renderer --locales-dir-path=/snap/pycharm-community/383/jbr/lib/locales --log-severity=disable --resources-dir-path=/snap/pycharm-community/383/jbr/lib --user-data-dir=/home/exizman/.cache/JetBrains/PyCharmCE2024.1/jcef_cache --disable-in-process-stack-traces --autoplay-policy=no-user-gesture-required --force-device-scale-factor=1.0 --log-file=/home/exizman/jcef_54108.log --lang=en-US --num-raster-threads=4 --enable-main-frame-before-activation --renderer-client-id=5 --time-ticks-at-unix-epoch=-1715942045150155 --launch-time-ticks=47909719047 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=0,i,16014490263416903375,17546964291247595027,262144 --disable-features=SpareRendererForSitePerProcess --variations-seed-version"[0m
+                 │ │ ├─[0;38;5;245m 61145 /home/exizman/fastapi/.venv/bin/python3 /home/exizman/fastapi/.venv/bin/uvicorn main:app --reload --host 0.0.0.0 --port 8000[0m
+                 │ │ ├─[0;38;5;245m 61146 /home/exizman/fastapi/.venv/bin/python3 -c "from multiprocessing.resource_tracker import main;main(4)"[0m
+                 │ │ ├─[0;38;5;245m 61230 /bin/bash --rcfile /snap/pycharm-community/383/plugins/terminal/shell-integrations/bash/bash-integration.bash -i[0m
+                 │ │ └─[0;38;5;245m106701 /home/exizman/fastapi/.venv/bin/python3 -c "from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=5, pipe_handle=10)" --multiprocessing-fork[0m
+                 │ ├─snap.snapd-desktop-integration.snapd-desktop-integration.service
+                 │ │ ├─[0;38;5;245m2774 /snap/snapd-desktop-integration/157/usr/bin/snapd-desktop-integration[0m
+                 │ │ └─[0;38;5;245m2843 /snap/snapd-desktop-integration/157/usr/bin/snapd-desktop-integration[0m
+                 │ ├─snap.telegram-desktop.telegram-desktop-30ceda1d-f335-4a60-b5cb-2f269a0d3786.scope
+                 │ │ └─[0;38;5;245m10703 /snap/telegram-desktop/5820/usr/bin/telegram-desktop --[0m
+                 │ ├─xdg-desktop-portal-gnome.service
+                 │ │ └─[0;38;5;245m3503 /usr/libexec/xdg-desktop-portal-gnome[0m
+                 │ └─xdg-desktop-portal-gtk.service
+                 │   └─[0;38;5;245m3531 /usr/libexec/xdg-desktop-portal-gtk[0m
+                 ├─background.slice
+                 │ └─tracker-miner-fs-3.service
+                 │   └─[0;38;5;245m3408 /usr/libexec/tracker-miner-fs-3[0m
+                 ├─init.scope
+                 │ ├─[0;38;5;245m2459 /usr/lib/systemd/systemd --user[0m
+                 │ └─[0;38;5;245m2465 "(sd-pam)"[0m
+                 └─session.slice
+                   ├─at-spi-dbus-bus.service
+                   │ ├─[0;38;5;245m2773 /usr/libexec/at-spi-bus-launcher[0m
+                   │ ├─[0;38;5;245m2781 /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 11 --address=unix:path=/run/user/1000/at-spi/bus_1[0m
+                   │ └─[0;38;5;245m2972 /usr/libexec/at-spi2-registryd --use-gnome-session[0m
+                   ├─dbus.service
+                   │ ├─[0;38;5;245m 2496 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only[0m
+                   │ ├─[0;38;5;245m 3012 /usr/libexec/gnome-shell-calendar-server[0m
+                   │ ├─[0;38;5;245m 3032 /usr/bin/gjs -m /usr/share/gnome-shell/org.gnome.Shell.Notifications[0m
+                   │ ├─[0;38;5;245m 3084 /usr/libexec/goa-daemon[0m
+                   │ ├─[0;38;5;245m 3157 /usr/libexec/goa-identity-service[0m
+                   │ ├─[0;38;5;245m 3253 /usr/libexec/ibus-portal[0m
+                   │ ├─[0;38;5;245m 3383 /usr/bin/gjs -m /usr/share/gnome-shell/org.gnome.ScreenSaver[0m
+                   │ ├─[0;38;5;245m 5819 /usr/bin/snap userd[0m
+                   │ ├─[0;38;5;245m82736 /usr/bin/nautilus --gapplication-service[0m
+                   │ └─[0;38;5;245m84534 /usr/bin/seahorse --gapplication-service[0m
+                   ├─filter-chain.service
+                   │ └─[0;38;5;245m2475 /usr/bin/pipewire -c filter-chain.conf[0m
+                   ├─gvfs-afc-volume-monitor.service
+                   │ └─[0;38;5;245m3302 /usr/libexec/gvfs-afc-volume-monitor[0m
+                   ├─gvfs-daemon.service
+                   │ ├─[0;38;5;245m 2863 /usr/libexec/gvfsd[0m
+                   │ ├─[0;38;5;245m 2871 /usr/libexec/gvfsd-fuse /run/user/1000/gvfs -f[0m
+                   │ ├─[0;38;5;245m 3464 /usr/libexec/gvfsd-trash --spawner :1.25 /org/gtk/gvfs/exec_spaw/0[0m
+                   │ ├─[0;38;5;245m 9828 /usr/libexec/gvfsd-recent --spawner :1.25 /org/gtk/gvfs/exec_spaw/1[0m
+                   │ └─[0;38;5;245m18564 /usr/libexec/gvfsd-http --spawner :1.25 /org/gtk/gvfs/exec_spaw/2[0m
+                   ├─gvfs-goa-volume-monitor.service
+                   │ └─[0;38;5;245m3343 /usr/libexec/gvfs-goa-volume-monitor[0m
+                   ├─gvfs-gphoto2-volume-monitor.service
+                   │ └─[0;38;5;245m3327 /usr/libexec/gvfs-gphoto2-volume-monitor[0m
+                   ├─gvfs-metadata.service
+                   │ └─[0;38;5;245m3601 /usr/libexec/gvfsd-metadata[0m
+                   ├─gvfs-mtp-volume-monitor.service
+                   │ └─[0;38;5;245m3320 /usr/libexec/gvfs-mtp-volume-monitor[0m
+                   ├─gvfs-udisks2-volume-monitor.service
+                   │ └─[0;38;5;245m3155 /usr/libexec/gvfs-udisks2-volume-monitor[0m
+                   ├─org.freedesktop.IBus.session.GNOME.service
+                   │ ├─[0;38;5;245m3079 /usr/bin/ibus-daemon --panel disable --xim[0m
+                   │ ├─[0;38;5;245m3239 /usr/libexec/ibus-memconf[0m
+                   │ ├─[0;38;5;245m3241 /usr/libexec/ibus-extension-gtk3[0m
+                   │ ├─[0;38;5;245m3245 /usr/libexec/ibus-x11 --kill-daemon[0m
+                   │ └─[0;38;5;245m3411 /usr/libexec/ibus-engine-simple[0m
+                   ├─org.gnome.SettingsDaemon.A11ySettings.service
+                   │ └─[0;38;5;245m3081 /usr/libexec/gsd-a11y-settings[0m
+                   ├─org.gnome.SettingsDaemon.Color.service
+                   │ └─[0;38;5;245m3083 /usr/libexec/gsd-color[0m
+                   ├─org.gnome.SettingsDaemon.Datetime.service
+                   │ └─[0;38;5;245m3085 /usr/libexec/gsd-datetime[0m
+                   ├─org.gnome.SettingsDaemon.Housekeeping.service
+                   │ └─[0;38;5;245m3088 /usr/libexec/gsd-housekeeping[0m
+                   ├─org.gnome.SettingsDaemon.Keyboard.service
+                   │ └─[0;38;5;245m3090 /usr/libexec/gsd-keyboard[0m
+                   ├─org.gnome.SettingsDaemon.MediaKeys.service
+                   │ └─[0;38;5;245m3092 /usr/libexec/gsd-media-keys[0m
+                   ├─org.gnome.SettingsDaemon.Power.service
+                   │ └─[0;38;5;245m3094 /usr/libexec/gsd-power[0m
+                   ├─org.gnome.SettingsDaemon.PrintNotifications.service
+                   │ ├─[0;38;5;245m3098 /usr/libexec/gsd-print-notifications[0m
+                   │ └─[0;38;5;245m3281 /usr/libexec/gsd-printer[0m
+                   ├─org.gnome.SettingsDaemon.Rfkill.service
+                   │ └─[0;38;5;245m3101 /usr/libexec/gsd-rfkill[0m
+                   ├─org.gnome.SettingsDaemon.ScreensaverProxy.service
+                   │ └─[0;38;5;245m3104 /usr/libexec/gsd-screensaver-proxy[0m
+                   ├─org.gnome.SettingsDaemon.Sharing.service
+                   │ └─[0;38;5;245m3106 /usr/libexec/gsd-sharing[0m
+                   ├─org.gnome.SettingsDaemon.Smartcard.service
+                   │ └─[0;38;5;245m3107 /usr/libexec/gsd-smartcard[0m
+                   ├─org.gnome.SettingsDaemon.Sound.service
+                   │ └─[0;38;5;245m3113 /usr/libexec/gsd-sound[0m
+                   ├─org.gnome.SettingsDaemon.Wacom.service
+                   │ └─[0;38;5;245m3117 /usr/libexec/gsd-wacom[0m
+                   ├─org.gnome.SettingsDaemon.XSettings.service
+                   │ └─[0;38;5;245m3125 /usr/libexec/gsd-xsettings[0m
+                   ├─org.gnome.Shell@x11.service
+                   │ ├─[0;38;5;245m  2917 /usr/bin/gnome-shell[0m
+                   │ ├─[0;38;5;245m  2969 /usr/libexec/mutter-x11-frames[0m
+                   │ └─[0;38;5;245m106980 gjs /usr/share/gnome-shell/extensions/ding@rastersoft.com/app/ding.js -E -P /usr/share/gnome-shell/extensions/ding@rastersoft.com/app[0m
+                   ├─pipewire-pulse.service
+                   │ └─[0;38;5;245m2480 /usr/bin/pipewire-pulse[0m
+                   ├─pipewire.service
+                   │ └─[0;38;5;245m2474 /usr/bin/pipewire[0m
+                   ├─wireplumber.service
+                   │ └─[0;38;5;245m2479 /usr/bin/wireplumber[0m
+                   ├─xdg-desktop-portal.service
+                   │ └─[0;38;5;245m3498 /usr/libexec/xdg-desktop-portal[0m
+                   ├─xdg-document-portal.service
+                   │ ├─[0;38;5;245m2519 /usr/libexec/xdg-document-portal[0m
+                   │ └─[0;38;5;245m2542 fusermount3 -o rw,nosuid,nodev,fsname=portal,auto_unmount,subtype=portal -- /run/user/1000/doc[0m
+                   └─xdg-permission-store.service
+                     └─[0;38;5;245m2533 /usr/libexec/xdg-permission-store[0m
