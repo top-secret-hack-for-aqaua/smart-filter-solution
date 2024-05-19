@@ -93,5 +93,6 @@ def add_refresh_token_cookie(response: Response, token: str):
         key="refresh",
         value=token,
         expires=int(exp.timestamp()),
-        httponly=True,
+        httponly=False,
+        samesite='strict',
     )

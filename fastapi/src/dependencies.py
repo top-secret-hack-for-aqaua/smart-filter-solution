@@ -9,6 +9,8 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from src.auth import models
 from src.auth.core.jwt import decode_access_token, SUB
 from src.database import SessionFactory
+
+
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="login")
 
 async def get_db():

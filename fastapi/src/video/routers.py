@@ -1,3 +1,7 @@
+from datetime import datetime
+
+from asyncpg.pgproto.pgproto import utc
+from sqlalchemy.types import DateTime
 from typing import Annotated
 
 from fastapi.routing import APIRouter
@@ -9,10 +13,14 @@ from fastapi import Depends
 from sqlalchemy import func, or_
 from sqlalchemy.orm import joinedload
 from src.dependencies import get_current_user
+import requests_async as requests
 router = APIRouter(
     prefix="/video",
     tags=["video"],
 )
+#9092
+
+
 
 
 
@@ -131,7 +139,7 @@ async def insert_rejections(
         data: schemas.ChildrenRejections,
         db: AsyncSession = Depends(get_db)
 ):
-    """Вставляет видео"""
+    """Вставляет отвергнутые теги"""
     data = data.dict()
     rejections = models.ChildrenRejections(**data)
     await rejections.save(db=db)
@@ -139,32 +147,114 @@ async def insert_rejections(
     return video_schema
 
 
-@router.get(path="/get_personal_tags/", response_model=list[schemas.VideoCategory])
+@router.get(path="/get_personal_tags/{children_name}", response_model=list[schemas.CustomVideoCategory])
 async def get_rejections(
         children_name: str,
         db: AsyncSession = Depends(get_db),
         # q: str = None
-) -> list[schemas.ChildrenRejections]:
+) -> list[schemas.CustomVideoCategory]:
     """
-    Возвращает список тегов.
-    Если есть q - то ищет по названию.
+    Возвращает список тегов с метадатой для пользователя.
     """
-
-
-
     tags_user = await db.execute(
-            select(models.VideoCategory, models.ChildrenRejections)
-            .join(models.ChildrenRejections, isouter=True)
-            .where(models.ChildrenRejections.children_name == children_name)
-        )
+        select(models.VideoCategory, )
+        .join(models.ChildrenRejections)
+        .where(models.ChildrenRejections.children_name == children_name)
+    )
+    tags = await db.execute(
+        select(models.VideoCategory)
+    )
 
-    tags_list = tags_user.scalars().all()
-    print(tags_list)
+    tags_list = tags.scalars().all()
+
     personal_tags_list = tags_user.scalars().all()
-
+    print(tags_list)
+    print(personal_tags_list)
     tags_schema = []
     for tag in tags_list:
+        if tag not in personal_tags_list:
+            tags_schema.append(
+                schemas.CustomVideoCategory(name=tag.name, description=tag.description,
+                                            is_child_resolved=tag.is_child_resolved, is_allow=False))
+    for tag in personal_tags_list:
         tags_schema.append(
-            schemas.VideoCategory(name=tag.name, description=tag.description, is_child_resolved=tag.is_child_resolved))
-
+            schemas.CustomVideoCategory(name=tag.name, description=tag.description,
+                                        is_child_resolved=tag.is_child_resolved, is_allow=True))
     return tags_schema
+
+
+@router.get(path="/get_stats/count/{child}")
+async def get_stats_count(
+        child: str,
+        db: AsyncSession = Depends(get_db),
+        from_date: datetime = None,
+        to_date: datetime = None
+):
+    if from_date and to_date:
+        from_date = from_date.astimezone(utc)
+        to_date = to_date.astimezone(utc)
+        from_date = from_date.replace(tzinfo=None)
+        to_date = to_date.replace(tzinfo=None)
+
+        query = (
+            select(models.HistoryWatch)
+            .select_from(models.Video).join(models.HistoryWatch)
+            .where(models.HistoryWatch.children_name == child)
+            .where(models.Video.created_at.between(from_date, to_date))
+
+        )
+    else:
+        query = (select(models.HistoryWatch)
+                 .select_from(models.Video).join(models.HistoryWatch)
+                 .where(models.HistoryWatch.children_name == child))
+
+    count = await db.execute(query)
+    count = count.scalars().all()
+    return count
+
+
+@router.get(path="/get_stats/sum/{child}")
+async def get_stats_sum(
+        child: str,
+        db: AsyncSession = Depends(get_db),
+        from_date: datetime = None,
+        to_date: datetime = None
+):
+    if from_date and to_date:
+        from_date = from_date.astimezone(utc)
+        to_date = to_date.astimezone(utc)
+        from_date = from_date.replace(tzinfo=None)
+        to_date = to_date.replace(tzinfo=None)
+
+        query = (
+            select(models.HistoryWatch)
+            .select_from(models.Video)
+            .where(models.Video.created_at.between(from_date, to_date))
+            .where(models.HistoryWatch.children_name == child)
+        )
+    else:
+        query = (select(models.HistoryWatch)
+                 .select_from(models.Video).join(models.HistoryWatch)
+                 .where(models.HistoryWatch.children_name == child))
+
+    sum = await db.execute(query)
+    sum = sum.scalars().all()
+    return {"sum": sum}
+
+
+@router.get(path="/detail_video/{video_id}", response_model=schemas.SuccessResponse)
+async def detail_video(video_id: int, children_name: str, db: AsyncSession = Depends(get_db)):
+    query = (
+        select(models.Video)
+        .where(models.Video.id == video_id)
+    )
+    video = await db.execute(query)
+    video = video.scalars().first()
+
+    db.add(models.HistoryWatch(
+        video_id=video.id,
+        children_name=children_name)
+    )
+
+    await db.commit()
+    return schemas.SuccessResponse()

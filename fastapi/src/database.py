@@ -1,20 +1,16 @@
-from typing import Any
-
 from fastapi import HTTPException, status
-from pydantic import PostgresDsn
 from sqlalchemy import select, MetaData
+from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy.ext.asyncio import (
     AsyncAttrs,
     async_sessionmaker,
     create_async_engine,
     AsyncSession,
 )
-from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy.orm import DeclarativeBase
-# from .config import posgres_async_config
-
+from src.config import postgres_async_config
 engine = create_async_engine(
-    url="postgresql+asyncpg://postgres:postgres@127.0.0.1:5432",
+    url=postgres_async_config.POSTGRES_URL or "postgresql+asyncpg://postgres:postgres@127.0.0.1:5432",
     echo=True
 )
 

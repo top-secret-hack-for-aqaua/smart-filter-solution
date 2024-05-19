@@ -1,6 +1,8 @@
 import uuid
 from typing import Annotated
 from datetime import datetime
+from fastapi.requests import Request
+
 from fastapi import status, APIRouter, HTTPException, Depends, BackgroundTasks, Response, Cookie
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -107,10 +109,12 @@ async def logout(
 
 @router.get("/me", response_model=schemas.User)
 async def me(
+    request: Request,
     token: Annotated[str, Depends(oauth2_scheme)],
     db: AsyncSession = Depends(get_db),
 ):
     token_data = await decode_access_token(token=token, db=db)
+    print(request.cookies)
     return await models.User.find_by_id(db=db, id=token_data[SUB])
 
 @router.post("/create_children", response_model=schemas.SuccessResponseScheme)
