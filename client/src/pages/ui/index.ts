@@ -6,3 +6,4 @@ export * from './FilterPage';
 export * from './CategoriesPage';
 export * from './NewUserPage';
 export * from './StatisticsPage';
+export * from './TimeControlPage';

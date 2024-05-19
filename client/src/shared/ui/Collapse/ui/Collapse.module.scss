@@ -1,0 +1,45 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+
+  & .info {
+    padding: 10px 20px;
+    background-color: var(--bg-dark);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    border-bottom: 1px solid var(--bg);
+
+    & .text {
+      display: flex;
+      flex-direction: column;
+      gap: 5px
+    }
+
+    & svg {
+      width: 15px;
+    }
+  }
+
+  & .active {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+
+
+  & .body {
+    padding: 10px 20px;
+    background-color: var(--bg-dark);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  & .close {
+    display: none;
+  }
+}

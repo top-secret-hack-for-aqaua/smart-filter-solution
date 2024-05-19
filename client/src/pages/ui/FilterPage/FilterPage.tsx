@@ -48,7 +48,7 @@ export const FilterPage = () => {
             </Text.Heading>
             <ul className={cls.list}>
                 <li className={cls.listItem}>
-                    <div className={cls.listItemInfo}>
+                    <Link to="/filter/time" className={cls.listItemInfo}>
                         <Text.Heading
                             color={ColorEnum.SECONDARY}
                             size={SizeEnum.H5}
@@ -63,7 +63,7 @@ export const FilterPage = () => {
                         >
                             Настройте количество часов, которое ребенок может пользоваться сервисами
                         </Text.Paragraph>
-                    </div>
+                    </Link>
                     <Time />
                 </li>
                 <li className={cls.listItem}>

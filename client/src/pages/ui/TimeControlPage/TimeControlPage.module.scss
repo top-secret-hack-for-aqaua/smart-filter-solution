@@ -1,0 +1,38 @@
+.wrapper {
+  overflow-y: scroll;
+  padding: 20px;
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  & .title {
+    text-align: center;
+  }
+
+  & .list {
+    padding: 5px;
+    border-radius: 10px;
+    justify-content: space-between;
+    background-color: var(--bg-dark);
+    display: flex;
+  }
+
+  & .collapseList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    & .innerList {
+
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      &Item {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}

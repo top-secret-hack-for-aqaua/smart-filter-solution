@@ -8,3 +8,5 @@ export * from './ThemeSwitcher';
 export * from './LineChart';
 export * from './DonutChart';
 export * from './BarChart';
+export * from './Tab';
+export * from './Collapse';
