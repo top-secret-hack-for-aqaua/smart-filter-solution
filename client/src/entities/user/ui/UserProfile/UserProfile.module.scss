@@ -27,6 +27,10 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
+  & button, a {
+    width: 100%;
+    display: block;
+  }
   & button {
     text-transform: uppercase;
   }
@@ -34,9 +38,5 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
-    & button, a {
-      width: 100%;
-      display: block;
-    }
   }
 }

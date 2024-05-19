@@ -1,1 +1,2 @@
-export * from './useGetAllCategories.ts';
+export * from './useGetCategoriesBySearch.ts';
+export * from './useToggleCategory.ts';

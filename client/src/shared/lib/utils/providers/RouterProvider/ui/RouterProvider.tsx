@@ -6,7 +6,7 @@ import {
     MainPage,
     NewUserPage,
     RegisterPage,
-    StatisticsPage, TimeControlPage,
+    StatisticsPage, TestPage, TimeControlPage,
     UserPage,
 } from '@pages/ui';
 import { BottomNavigation } from '@widgets/ui';
@@ -37,6 +37,10 @@ export const router = createBrowserRouter([
                         element: <NewUserPage />,
                     },
                 ],
+            },
+            {
+                path: 'test',
+                element: <TestPage />,
             },
             {
                 path: 'filter',

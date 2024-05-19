@@ -7,13 +7,16 @@ export const Category = (
         {
             name,
             isActive,
+            ...props
         }:
             ICategoryProps,
     ) => {
         return (
-            <div className={classNames(cls.wrapper, {
-                [cls.active]: isActive,
-            }, [])}>
+            <div
+                {...props}
+                className={classNames(cls.wrapper, {
+                    [cls.active]: isActive,
+                }, [])}>
                 <Text.Paragraph
                     className={cls.text}
                     color={ColorEnum.WHITE}

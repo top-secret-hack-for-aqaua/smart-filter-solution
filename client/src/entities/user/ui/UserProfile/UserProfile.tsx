@@ -27,13 +27,6 @@ export const UserProfile = () => {
                 >
                     {user && user.full_name}
                 </Text.Heading>
-                <Button
-                    color={ColorEnum.TEXT}
-                    bgColor={ColorEnum.DARKBG}
-                    weight={WeightEnum.MEDIUM}
-                    size={SizeEnum.H1}>
-                    РЕДАКТИРОВАТЬ ПРОФИЛЬ
-                </Button>
                 <div className={cls.additional}>
                     <Text.Link to={'/user/new'}>
                         <Button
@@ -60,6 +53,15 @@ export const UserProfile = () => {
                     size={SizeEnum.H1}>
                     Выйти
                 </Button>
+                <Text.Link to={'/test'}>
+                    <Button
+                        color={ColorEnum.TEXT}
+                        bgColor={ColorEnum.DARKBG}
+                        weight={WeightEnum.MEDIUM}
+                        size={SizeEnum.H1}>
+                        Тест
+                    </Button>
+                </Text.Link>
             </div>
         </div>
     );
