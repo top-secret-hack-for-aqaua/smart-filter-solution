@@ -2,7 +2,7 @@ from fastapi_offline import FastAPIOffline as FastAPIOffline
 import uvicorn
 from src.auth.routers import router as router_auth
 from src.video.routers import router as router_video
-from src.kafka.routers import router as router_kafka
+# from src.kafka.routers import router as router_kafka
 # from fastapi.middleware.cors import CORSMiddleware
 from starlette.middleware.cors import CORSMiddleware
 

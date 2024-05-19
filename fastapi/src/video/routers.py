@@ -1,5 +1,6 @@
 from datetime import datetime
-
+from http.client import HTTPException
+import requests
 from asyncpg.pgproto.pgproto import utc
 from sqlalchemy.types import DateTime
 from typing import Annotated
@@ -8,12 +9,11 @@ from fastapi.routing import APIRouter
 from src.dependencies import get_db
 from src.video import schemas, models
 from sqlalchemy.ext.asyncio import AsyncSession
-from sqlalchemy import select, join
+from sqlalchemy import select, join, delete
 from fastapi import Depends
-from sqlalchemy import func, or_
+from sqlalchemy import func, or_, and_
 from sqlalchemy.orm import joinedload
 from src.dependencies import get_current_user
-import requests_async as requests
 router = APIRouter(
     prefix="/video",
     tags=["video"],
@@ -21,7 +21,30 @@ router = APIRouter(
 #9092
 
 
+class LaravelAPI:
+    def __init__(self, base_url='http://localhost:8000/api'):
+        self.base_url = base_url
 
+    def create_job(self, link):
+        url = f"{self.base_url}/create-job"
+        data = {'link': link}
+        response = requests.post(url, json=data)
+        return response.json()
+
+    def get_job(self, topic):
+        url = f"{self.base_url}/jobs/{topic}"
+        response = requests.get(url)
+        return response.json()
+
+    def complete_job(self, topic, data, last_topic_id):
+        url = f"{self.base_url}/create-job-in-topic"
+        payload = {
+            'topic': topic,
+            'data': data,
+            'last_topic_id': last_topic_id
+        }
+        response = requests.post(url, json=payload)
+        return response.json()
 
 
 @router.post(path="/insert_video", response_model=schemas.Video)
@@ -34,6 +57,8 @@ async def insert_video(
     video = models.Video(**data)
     await video.save(db=db)
     video_schema = schemas.Video(**data)
+    laravel = LaravelAPI()
+    response = laravel.create_job(video_schema.url)
     return video_schema
 
 
@@ -134,36 +159,62 @@ async def get_tags(
     return tags_schema
 
 
-@router.post(path="/insert_rejections", response_model=schemas.ChildrenRejections)
+@router.post(path="/insert_rejections")
 async def insert_rejections(
         data: schemas.ChildrenRejections,
         db: AsyncSession = Depends(get_db)
 ):
     """Вставляет отвергнутые теги"""
+
     data = data.dict()
     rejections = models.ChildrenRejections(**data)
     await rejections.save(db=db)
     video_schema = schemas.ChildrenRejections(**data)
     return video_schema
 
-
+@router.delete(path="/delete_rejections", response_model=list[schemas.ChildrenRejections])
+async def delete_rejections(
+        data: schemas.ChildrenRejections,
+        db: AsyncSession = Depends(get_db)
+):
+    """Удаляет отвергнутые теги"""
+    data = data.dict()
+    rejections = models.ChildrenRejections(**data)
+    await rejections.delete(db=db)
+    video_schema = schemas.ChildrenRejections(**data)
+    return video_schema
 @router.get(path="/get_personal_tags/{children_name}", response_model=list[schemas.CustomVideoCategory])
 async def get_rejections(
         children_name: str,
         db: AsyncSession = Depends(get_db),
-        # q: str = None
+        q: str = None
 ) -> list[schemas.CustomVideoCategory]:
     """
     Возвращает список тегов с метадатой для пользователя.
     """
-    tags_user = await db.execute(
-        select(models.VideoCategory, )
-        .join(models.ChildrenRejections)
-        .where(models.ChildrenRejections.children_name == children_name)
-    )
-    tags = await db.execute(
-        select(models.VideoCategory)
-    )
+    if q:
+
+
+
+        tags_user = await db.execute(
+            select(models.VideoCategory, )
+            .join(models.ChildrenRejections)
+            .where(models.ChildrenRejections.children_name == children_name)
+            .where(models.VideoCategory.name.contains(q))
+        )
+        tags = await db.execute(
+            select(models.VideoCategory)
+            .where(models.VideoCategory.name.contains(q))
+        )
+    else:
+        tags_user = await db.execute(
+            select(models.VideoCategory, )
+            .join(models.ChildrenRejections)
+            .where(models.ChildrenRejections.children_name == children_name)
+        )
+        tags = await db.execute(
+            select(models.VideoCategory)
+        )
 
     tags_list = tags.scalars().all()
 
@@ -197,19 +248,19 @@ async def get_stats_count(
         to_date = to_date.replace(tzinfo=None)
 
         query = (
-            select(models.HistoryWatch)
+            select(func.count(models.HistoryWatch.video_id))
             .select_from(models.Video).join(models.HistoryWatch)
             .where(models.HistoryWatch.children_name == child)
             .where(models.Video.created_at.between(from_date, to_date))
 
         )
     else:
-        query = (select(models.HistoryWatch)
+        query = (select(func.count(models.HistoryWatch.video_id))
                  .select_from(models.Video).join(models.HistoryWatch)
                  .where(models.HistoryWatch.children_name == child))
 
     count = await db.execute(query)
-    count = count.scalars().all()
+    count = count.scalars().first()
     return count
 
 

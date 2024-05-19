@@ -34,6 +34,26 @@ class Base(AsyncAttrs, DeclarativeBase):
             raise HTTPException(
                 status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail=repr(ex)
             ) from ex
+    async def delete(self, db: AsyncSession):
+        """
+        :param db:
+        :return:
+        """
+        try:
+            await db.delete(self)
+            await db.commit()
+            return self
+        except SQLAlchemyError as ex:
+            raise HTTPException(
+                status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail=repr(ex)
+            ) from ex
+    async def is_exists(self, db: AsyncSession):
+        """
+        :param db:
+        :return:
+        """
+
+
 
 
 
